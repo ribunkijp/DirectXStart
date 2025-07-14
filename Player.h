@@ -1,0 +1,35 @@
+/**********************************************************************************
+    Player.h
+
+                                                                LI WENHUI
+                                                                2025/07/14
+
+**********************************************************************************/
+
+#ifndef PLAYER_H
+#define PLAYER_H
+
+#pragma once
+#include <string>
+#include <spine/Skeleton.h>
+#include <spine/Atlas.h>
+#include <spine/AnimationState.h>
+#include "TextureLoader.h"
+
+
+class Player {
+public:
+    Player();
+    ~Player();
+    bool load(ID3D11Device* device, const std::string& atlasPath, const std::string& skelPath);
+
+private:
+    SpineTextureLoader* m_loader;
+    spine::Atlas* m_atlas;
+    spine::SkeletonData* m_skeletonData;
+    spine::Skeleton* m_skeleton;
+    spine::AnimationState* m_animationState;
+};
+
+
+#endif 

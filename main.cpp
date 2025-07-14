@@ -16,6 +16,7 @@
 #include "StateInfo.h"
 #include "d3dApp.h"
 #include "Timer.h"
+#include "Render.h"
 
 
 void GetScaledWindowSizeAndPosition(float logicalWidth, float logicalHeight,
@@ -127,6 +128,8 @@ int WINAPI wWinMain(
 
         timer.Tick();    // 毎フレーム呼び出す
         float deltaTime = timer.GetDeltaTime();  // 各フレーム経過時間\
+
+        Render(hwnd, pState);
     
     }
 
@@ -246,7 +249,6 @@ void GetScaledWindowSizeAndPosition(float logicalWidth, float logicalHeight,
     // 作業領域を取得
     MONITORINFO mi = { sizeof(mi) };
 
-    BOOL ret = GetMonitorInfo(monitor, &mi);
 
     int workW = 0, workH = 0;
     if (GetMonitorInfo(monitor, &mi))

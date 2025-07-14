@@ -11,6 +11,7 @@
 #define STATEINFO_H
 
 #include <d3d11.h>//ID3D11Device
+#include <DirectXMath.h>
 
 
 struct StateInfo {

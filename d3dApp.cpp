@@ -12,6 +12,25 @@
 
 
 bool InitD3D(HWND hwnd, StateInfo* pState, float clientWidth, float clientHeight) {
+    /*
+       元のモデル座標（モデル中心が原点）
+            ↓ worldMatrix（平行移動・拡大縮小）
+       ワールド座標（左上が原点）
+            ↓ viewMatrix（単位行列・カメラなし）
+       ビュー座標
+            ↓ projectionMatrix（正射投影）
+       NDC座標（X/Y は [-1, 1]、左上は -1,+1 に）
+            ↓ グラフィックスパイプラインによる自動マッピング
+       画面ピクセル位置
+   */
+   // カメラ位置と向きを設定
+    pState->view = DirectX::XMMatrixIdentity(); // まずは単位行列、カメラ位置を設定したら更新できる
+    // 3D/2D ワールドを画面にマッピング
+    pState->projection = DirectX::XMMatrixOrthographicOffCenterLH(
+        0.0f, pState->logicalWidth,      // left から right：X軸は左から右へ
+        pState->logicalHeight, 0.0f,     // bottom から top：Y軸は上から下へ
+        0.0f, 1.0f              // near から far：Z軸は手前から奥へ
+    );
 
     // DXGI_SWAP_CHAIN_DESC はスワップチェーンの設定用構造体です。
     // バッファ数、解像度、フォーマット、ウィンドウハンドル、フルスクリーン/ウィンドウ、アンチエイリアス等を設定。
@@ -184,18 +203,14 @@ bool InitD3D(HWND hwnd, StateInfo* pState, float clientWidth, float clientHeight
     }
     //入力レイアウト作成
     D3D11_INPUT_ELEMENT_DESC layout[] = {
-        // 语义名      索引 格式                      插槽 偏移   按顶点还是实例  实例数据步幅
-        {"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,    0, 0,   D3D11_INPUT_PER_VERTEX_DATA, 0},   // 位置
-        {"NORMAL",   0, DXGI_FORMAT_R32G32B32_FLOAT,    0, 12,  D3D11_INPUT_PER_VERTEX_DATA, 0},   // 法线
-        {"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 24,  D3D11_INPUT_PER_VERTEX_DATA, 0},   // 颜色
-        {"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,       0, 40,  D3D11_INPUT_PER_VERTEX_DATA, 0},   // 纹理坐标
-        {"TANGENT",  0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 48,  D3D11_INPUT_PER_VERTEX_DATA, 0}    // 切线
-        // 共5项，偏移分别为 0,12,24,40,48
+        {"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,    0, 0,   D3D11_INPUT_PER_VERTEX_DATA, 0},  
+        {"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 24,  D3D11_INPUT_PER_VERTEX_DATA, 0},  
+        {"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,       0, 40,  D3D11_INPUT_PER_VERTEX_DATA, 0},  
     };
 
     hr = pState->device->CreateInputLayout(
         layout,
-        ARRAYSIZE(layout),  // 自动计算数组长度
+        ARRAYSIZE(layout),  
         vsBlob->GetBufferPointer(),
         vsBlob->GetBufferSize(),
         &pState->inputLayout
@@ -225,6 +240,39 @@ bool InitD3D(HWND hwnd, StateInfo* pState, float clientWidth, float clientHeight
     hr = pState->device->CreateSamplerState(&sampDesc, &pState->samplerState);
     if (FAILED(hr)) {
         MessageBox(hwnd, L"Failed to create sampler state.", L"Error", MB_OK);
+        return false;
+    }
+
+    // --- 透明ブレンドステート作成 ---
+    D3D11_BLEND_DESC blendDesc = {};
+    // RenderTarget[0] は最初のレンダーターゲット
+    blendDesc.RenderTarget[0].BlendEnable = TRUE; // ブレンド有効
+    blendDesc.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA; // ソースのα値
+    blendDesc.RenderTarget[0].DestBlend = D3D11_BLEND_INV_SRC_ALPHA; // 1-ソースのα値
+    blendDesc.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD; // ソース+デスティネーション
+    blendDesc.RenderTarget[0].SrcBlendAlpha = D3D11_BLEND_ONE; // α成分（通常1）
+    blendDesc.RenderTarget[0].DestBlendAlpha = D3D11_BLEND_ZERO; // α成分（通常0）
+    blendDesc.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD; // α加算
+    // D3D11_COLOR_WRITE_ENABLE_ALL は全色成分(RGBA)書込可
+    blendDesc.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
+
+    hr = pState->device->CreateBlendState(&blendDesc, &pState->blendState);
+    if (FAILED(hr)) {
+        MessageBox(hwnd, L"Failed to create blend state.", L"Error", MB_OK);
+        return false;
+    }
+
+    // 透明物体用の深度/ステンシルステート作成
+    D3D11_DEPTH_STENCIL_DESC transparentDepthStencilDesc = {};
+    transparentDepthStencilDesc.DepthEnable = TRUE; // 深度テストは有効（不透明物体との比較）
+    //// **深度書き込み無効化** 透明物体が奥の物体のZ値を「塗りつぶす」のを防ぐ
+    transparentDepthStencilDesc.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ZERO;
+    transparentDepthStencilDesc.DepthFunc = D3D11_COMPARISON_LESS;
+    transparentDepthStencilDesc.StencilEnable = FALSE;
+
+    hr = pState->device->CreateDepthStencilState(&transparentDepthStencilDesc, &pState->depthStencilStateTransparent);
+    if (FAILED(hr)) {
+        MessageBox(hwnd, L"Failed to create transparent depth stencil state.", L"Error", MB_OK);
         return false;
     }
 
@@ -365,9 +413,9 @@ void OnResize(HWND hwnd, StateInfo* pState, UINT width, UINT height)
     // この方法が推奨
 
 
-    /*state->projection = DirectX::XMMatrixOrthographicOffCenterLH(
-        0.0f, state->logicalWidth,
-        state->logicalHeight, 0.0f,
-        0.0f, 1.0f);*/
+    pState->projection = DirectX::XMMatrixOrthographicOffCenterLH(
+        0.0f, pState->logicalWidth,
+        pState->logicalHeight, 0.0f,
+        0.0f, 1.0f);
 
 }
