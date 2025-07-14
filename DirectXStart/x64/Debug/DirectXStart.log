@@ -1,9 +1,1 @@
-﻿  main.cpp
-C:\code\DirectXStart\StateInfo.h(39,11): warning C4820: 'StateInfo': '8' バイトのパディングを データ メンバー 'StateInfo::logicalHeight' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\DirectXStart\main.cpp(130,15): warning C4189: 'deltaTime': ローカル変数が初期化されましたが、参照されていません
-C:\code\DirectXStart\main.cpp(188,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\main.cpp(188,1): warning C5045: C:\code\DirectXStart\main.cpp(187) : 注: この行で比較を行ってインデックス 'height' の範囲を確認します
-C:\code\DirectXStart\main.cpp(188,1): warning C5045: C:\code\DirectXStart\main.cpp(188) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-  DirectXStart.vcxproj -> C:\code\DirectXStart\x64\Debug\DirectXStart.exe
+﻿

@@ -21,7 +21,8 @@ class Player {
 public:
     Player();
     ~Player();
-    bool load(ID3D11Device* device, const std::string& atlasPath, const std::string& skelPath);
+    bool Load(ID3D11Device* device, const std::string& atlasPath, const std::string& skelPath);
+    void Update(float delaTime);
 
 private:
     SpineTextureLoader* m_loader;
@@ -29,6 +30,7 @@ private:
     spine::SkeletonData* m_skeletonData;
     spine::Skeleton* m_skeleton;
     spine::AnimationState* m_animationState;
+    spine::AnimationStateData* m_animationStateData;
 };
 
 
