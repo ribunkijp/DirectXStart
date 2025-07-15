@@ -1,22 +1,17 @@
 /**********************************************************************************
-    Render.h
+    BufferUtils.h
 
                                                                 LI WENHUI
-                                                                2025/07/14
+                                                                2025/07/15
 
 **********************************************************************************/
-
-#ifndef  RENDER_H
-#define RENDER_H
 
 
 #include "d3dApp.h"
 
-struct StateInfo;
-
-void Render(HWND hwnd, StateInfo* pState);
+struct Vertex;
 
 
+ID3D11Buffer* CreateQuadVertexBuffer(ID3D11Device* device, Vertex* vertices, unsigned vertices_count);
 
-
-#endif
+ID3D11Buffer* CreateQuadIndexBuffer(ID3D11Device* device);

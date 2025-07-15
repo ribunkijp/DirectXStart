@@ -11,11 +11,13 @@
 
 #include <DirectXMath.h>
 
-struct ConstantBuffer
-{
-    DirectX::XMMATRIX world;      // 世界矩阵
-    DirectX::XMMATRIX view;       // 视图矩阵
-    DirectX::XMMATRIX proj;       // 投影矩阵
+struct ConstantBuffer {
+    DirectX::XMMATRIX model;
+    DirectX::XMMATRIX view;
+    DirectX::XMMATRIX projection;
+    float texOffset[2];
+    float texScale[2];
+    float padding[4];
 };
 
 

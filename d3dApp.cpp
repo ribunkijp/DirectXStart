@@ -278,6 +278,33 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
     }
 
 
+    // Normal
+
+
+    // Additive
+    D3D11_BLEND_DESC blendDescAdd = blendDesc;
+    blendDescAdd.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA;
+    blendDescAdd.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
+    blendDescAdd.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+    pState->device->CreateBlendState(&blendDescAdd, &pState->blendStateAdditive);
+
+    // Multiply
+    D3D11_BLEND_DESC blendDescMul = blendDesc;
+    blendDescMul.RenderTarget[0].SrcBlend = D3D11_BLEND_DEST_COLOR;
+    blendDescMul.RenderTarget[0].DestBlend = D3D11_BLEND_ZERO;
+    blendDescMul.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+    pState->device->CreateBlendState(&blendDescMul, &pState->blendStateMultiply);
+
+    // Screen
+    D3D11_BLEND_DESC blendDescScreen = blendDesc;
+    blendDescScreen.RenderTarget[0].SrcBlend = D3D11_BLEND_INV_DEST_COLOR;
+    blendDescScreen.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
+    blendDescScreen.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+    pState->device->CreateBlendState(&blendDescScreen, &pState->blendStateScreen);
+
+
+
+
     pState->player = new Player();
 
     bool createPlayer = pState->player->Load(device, "assets/spineboy-pro.atlas", "assets/spineboy-pro.skel");

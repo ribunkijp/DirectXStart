@@ -12,7 +12,10 @@
 
 #include <d3d11.h>//ID3D11Device
 #include <DirectXMath.h>
-#include "Player.h"
+
+struct Player;
+
+#define SAFE_RELEASE(p) { if(p) { (p)->Release(); (p) = nullptr; } }
 
 
 struct StateInfo {
@@ -33,14 +36,24 @@ struct StateInfo {
     //
     ID3D11RenderTargetView* renderTargetView = nullptr;
     //
-    DirectX::XMMATRIX view = DirectX::XMMatrixIdentity();
-    DirectX::XMMATRIX projection = DirectX::XMMatrixIdentity();
-
-    float logicalWidth = 1888.0f;
+     float logicalWidth = 1888.0f;
     float logicalHeight = 1062.0f;
 
     Player* player = nullptr;
 
+    DirectX::XMMATRIX view = DirectX::XMMatrixIdentity();
+    DirectX::XMMATRIX projection = DirectX::XMMatrixIdentity();
+
+    ID3D11BlendState* blendStateNormal = nullptr;
+    ID3D11BlendState* blendStateAdditive = nullptr;
+    ID3D11BlendState* blendStateMultiply = nullptr;
+    ID3D11BlendState* blendStateScreen = nullptr;
+    ~StateInfo() {
+        SAFE_RELEASE(blendStateNormal);
+        SAFE_RELEASE(blendStateAdditive);
+        SAFE_RELEASE(blendStateMultiply);
+        SAFE_RELEASE(blendStateScreen);
+    }
 };
 
 

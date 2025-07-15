@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BufferUtils.cpp" />
     <ClCompile Include="d3dApp.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
@@ -142,6 +143,7 @@
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BufferUtils.h" />
     <ClInclude Include="ConstantBuffer.h" />
     <ClInclude Include="d3dApp.h" />
     <ClInclude Include="GameObject.h" />
@@ -150,6 +152,7 @@
     <ClInclude Include="StateInfo.h" />
     <ClInclude Include="TextureLoader.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="shader.hlsl">

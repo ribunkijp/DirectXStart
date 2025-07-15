@@ -141,6 +141,7 @@ int WINAPI wWinMain(
         timer.Tick();    // 毎フレーム呼び出す
         float deltaTime = timer.GetDeltaTime();  // 各フレーム経過時間\
 
+
         Render(hwnd, pState);
     
     }
