@@ -12,9 +12,10 @@
 ID3D11Buffer* CreateQuadVertexBuffer(ID3D11Device* device, Vertex* vertices, unsigned vertices_count) {
 
     D3D11_BUFFER_DESC bd = {};// Direct3D 11 でバッファの属性を記述する構造体
-    bd.Usage = D3D11_USAGE_DEFAULT;              // バッファはGPUによって読み書きされる。作成後はCPUから直接アクセスできない。
+    bd.Usage = D3D11_USAGE_DYNAMIC;              
     bd.ByteWidth = sizeof(Vertex) * vertices_count;             // バッファのサイズ＝頂点全体のサイズ
     bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;     // 頂点バッファとして使用
+    bd.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE; 
 
     D3D11_SUBRESOURCE_DATA initData = {};//D3D11_SUBRESOURCE_DATA はバッファ初期化用の構造体
     initData.pSysMem = vertices;// GPU上のバッファを初期化するためのデータへのポインタ

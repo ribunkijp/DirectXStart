@@ -19,6 +19,7 @@
 #include "Render.h"
 #include <spine/Extension.h>
 #include <spine/Debug.h>
+#include "Player.h"  
 
 
 
@@ -141,6 +142,7 @@ int WINAPI wWinMain(
         timer.Tick();    // 毎フレーム呼び出す
         float deltaTime = timer.GetDeltaTime();  // 各フレーム経過時間\
 
+        pState->player->Update(deltaTime);
 
         Render(hwnd, pState);
     

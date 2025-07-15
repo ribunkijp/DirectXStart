@@ -6,7 +6,7 @@
 struct Vertex {
     float x, y;
     float u, v;
-    uint32_t color;
+    float r, g, b, a;
 };
 
 #endif

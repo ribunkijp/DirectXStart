@@ -43,12 +43,18 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
     spine::AnimationState* animationState = new spine::AnimationState(animationStateData);
     m_animationStateData = animationStateData;
     m_animationState = animationState;
+    
+    m_animationState->setAnimation(0, "walk", true);
+   
+    if (!InitBuffers(device)) {
+        return false;
+    }
 
-    //spine::Bone* bone = m_skeleton->findBone("leftArm");
-    //if (bone) {
-    //    bone->setRotation(45.0f); 
-    //    bone->setScaleX(1.2f);  
-    //}
+    // 
+    if (!InitConstantBuffer(device)) {
+        return false;
+    }
+
 
     return true;
 }
@@ -63,6 +69,19 @@ bool Player::InitBuffers(ID3D11Device* device) {
     m_vertexBuffer = CreateQuadVertexBuffer(device, vertices, 4);
     m_indexBuffer = CreateQuadIndexBuffer(device);
     return m_vertexBuffer && m_indexBuffer;
+}
+bool Player::InitConstantBuffer(ID3D11Device* device) {
+    D3D11_BUFFER_DESC cbd = {};
+    cbd.Usage = D3D11_USAGE_DYNAMIC;
+    cbd.ByteWidth = sizeof(ConstantBuffer);
+    cbd.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+    cbd.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
+    cbd.MiscFlags = 0;
+    cbd.StructureByteStride = 0;
+
+
+    HRESULT hr = device->CreateBuffer(&cbd, nullptr, &constantBuffer);
+    return SUCCEEDED(hr);
 }
 void Player::UpdateConstantBuffer(ID3D11DeviceContext* context, const DirectX::XMMATRIX& view, const DirectX::XMMATRIX& projection) {
 
@@ -138,11 +157,20 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
                 vertices[v].y = worldVertices[v * 2 + 1];
                 vertices[v].u = uv_ptr[v * 2 + 0];
                 vertices[v].v = uv_ptr[v * 2 + 1];
-                vertices[v].color = 0xFFFFFFFF; // 纯白，可后续混合slot、skeleton、region的颜色
+                vertices[v].r = 1.0f;
+                vertices[v].g = 1.0f;
+                vertices[v].b = 1.0f;
+                vertices[v].a = 1.0f;
             }
             // 5. 写入顶点buffer
             D3D11_MAPPED_SUBRESOURCE mapped;
-            context->Map(m_vertexBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mapped);
+            HRESULT hr = context->Map(m_vertexBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mapped);
+            if (FAILED(hr)) {
+                wchar_t msg[256];
+                swprintf(msg, 256, L"Failed to map vertex buffer. HRESULT=0x%08X", hr);
+                MessageBox(nullptr, msg, L"Error", MB_OK | MB_ICONERROR);
+                return;
+            }
             memcpy(mapped.pData, vertices, sizeof(vertices));
             context->Unmap(m_vertexBuffer, 0);
 
@@ -154,6 +182,8 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
 
             // 7. 绑定纹理
             context->PSSetShaderResources(0, 1, &srv);
+
+            context->DrawIndexed(6, 0, 0);
         }
         
     }

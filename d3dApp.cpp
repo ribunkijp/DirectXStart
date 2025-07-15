@@ -205,8 +205,8 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
     //入力レイアウト作成
     D3D11_INPUT_ELEMENT_DESC layout[] = {
         {"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,    0, 0,   D3D11_INPUT_PER_VERTEX_DATA, 0},  
-        {"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 24,  D3D11_INPUT_PER_VERTEX_DATA, 0},  
-        {"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,       0, 40,  D3D11_INPUT_PER_VERTEX_DATA, 0},  
+        {"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,       0, 8,  D3D11_INPUT_PER_VERTEX_DATA, 0},  
+        {"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 16,  D3D11_INPUT_PER_VERTEX_DATA, 0} 
     };
 
     hr = pState->device->CreateInputLayout(
@@ -307,7 +307,7 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
 
     pState->player = new Player();
 
-    bool createPlayer = pState->player->Load(device, "assets/spineboy-pro.atlas", "assets/spineboy-pro.skel");
+    bool createPlayer = pState->player->Load(pState->device, "assets/spineboy-pro.atlas", "assets/spineboy-pro.skel");
     if (!createPlayer) {
         MessageBox(hwnd, L"Failed to create player", L"Error", MB_OK);
         return false;

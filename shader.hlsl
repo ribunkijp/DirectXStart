@@ -26,8 +26,8 @@ SamplerState SamplerClamp : register(s0);
 struct VS_INPUT
 {
     float3 pos : POSITION; // スクリーン座標（ピクセル）
-    float4 col : COLOR;
     float2 tex : TEXCOORD; // テクスチャ座標入力
+    float4 col : COLOR;
 };
 
 // この構造体は頂点シェーダーからピクセルシェーダーに渡すデータで、
@@ -35,8 +35,8 @@ struct VS_INPUT
 struct PS_INPUT
 {
     float4 pos : SV_POSITION;
-    float4 col : COLOR;
     float2 tex : TEXCOORD; // テクスチャ座標出力
+    float4 col : COLOR;
 };
 // 頂点シェーダーのメイン関数 VSMain
 PS_INPUT VSMain(VS_INPUT input)

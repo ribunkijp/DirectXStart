@@ -1,4 +1,208 @@
-﻿  Player.cpp
+﻿  BufferUtils.cpp
+  d3dApp.cpp
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(201,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(202,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(212,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(213,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(123,7): warning C4820: 'spine::PowInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowInterpolation::power' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(134,7): warning C4820: 'spine::PowOutInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowOutInterpolation::power' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skeleton.h(265,15): warning C4820: 'spine::Skeleton': '4' バイトのパディングを データ メンバー 'spine::Skeleton::_time' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TextureRegion.h(43,22): warning C4820: 'spine::TextureRegion': '4' バイトのパディングを データ メンバー 'spine::TextureRegion::originalHeight' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(86,8): warning C4820: 'spine::AtlasPage': '3' バイトのパディングを データ メンバー 'spine::AtlasPage::pma' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(87,13): warning C4820: 'spine::AtlasPage': '4' バイトのパディングを データ メンバー 'spine::AtlasPage::index' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(102,10): warning C4820: 'spine::AtlasRegion': '4' バイトのパディングを データ メンバー 'spine::AtlasRegion::y' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(129,8): warning C4820: 'spine::Slot': '7' バイトのパディングを データ メンバー 'spine::Slot::_hasDarkColor' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C4626: 'spine::Slot': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C5027: 'spine::Slot': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(320,13): warning C4820: 'spine::EventQueueEntry': '4' バイトのパディングを データ メンバー 'spine::EventQueueEntry::_type' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(333,8): warning C4820: 'spine::EventQueue': '7' バイトのパディングを データ メンバー 'spine::EventQueue::_drainDisabled' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(327,15): warning C4626: 'spine::EventQueue': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(474,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_animationsChanged' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(483,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_manualTrackEntryDisposal' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Player.h(28,7): warning C4099: 'Player': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+      C:\code\DirectXStart\Player.h(28,7):
+      'Player' の宣言を確認してください
+  
+C:\code\DirectXStart\Player.h(52,19): warning C4820: 'Player': '8' バイトのパディングを データ メンバー 'Player::constantBuffer' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\d3dApp.cpp(15,39): warning C4100: 'device': 参照されないパラメーター
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(468,20):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::Pool<spine::TrackEntry>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(45,4):
+          クラス テンプレート メンバー関数 'spine::Pool<spine::TrackEntry>::~Pool(void)' のコンパイル中
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(46,19):
+          コンパイル対象の関数 テンプレート インスタンス化 'void spine::ContainerUtil::cleanUpVectorOfPointers<spine::TrackEntry>(spine::Vector<spine::TrackEntry *> &)' のリファレンスを確認してください
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(115,20): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warning C4820: 'spine::HashMap<spine::PropertyId,bool>::Entry': '7' バイトのパディングを データ メンバー 'spine::HashMap<spine::PropertyId,bool>::Entry::_value' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(473,29):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::HashMap<spine::PropertyId,bool>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(97,8):
+          クラス テンプレート メンバー関数 'void spine::HashMap<spine::PropertyId,bool>::clear(void)' のコンパイル中
+              C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(94,9):
+              'spine::HashMap<spine::PropertyId,bool>::~HashMap' の 'spine::HashMap<spine::PropertyId,bool>::clear' への最初の参照を参照してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
+          クラス 'spine::HashMap<spine::PropertyId,bool>::Entry' のコンパイル中
+  
+  GameObject.cpp
+  main.cpp
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(201,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(202,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(212,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(213,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Debug.h(45,8): warning C4820: 'spine::DebugExtension::Allocation': '4' バイトのパディングを データ メンバー 'spine::DebugExtension::Allocation::line' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(123,7): warning C4820: 'spine::PowInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowInterpolation::power' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(134,7): warning C4820: 'spine::PowOutInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowOutInterpolation::power' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skeleton.h(265,15): warning C4820: 'spine::Skeleton': '4' バイトのパディングを データ メンバー 'spine::Skeleton::_time' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TextureRegion.h(43,22): warning C4820: 'spine::TextureRegion': '4' バイトのパディングを データ メンバー 'spine::TextureRegion::originalHeight' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(86,8): warning C4820: 'spine::AtlasPage': '3' バイトのパディングを データ メンバー 'spine::AtlasPage::pma' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(87,13): warning C4820: 'spine::AtlasPage': '4' バイトのパディングを データ メンバー 'spine::AtlasPage::index' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(102,10): warning C4820: 'spine::AtlasRegion': '4' バイトのパディングを データ メンバー 'spine::AtlasRegion::y' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(129,8): warning C4820: 'spine::Slot': '7' バイトのパディングを データ メンバー 'spine::Slot::_hasDarkColor' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C4626: 'spine::Slot': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C5027: 'spine::Slot': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(320,13): warning C4820: 'spine::EventQueueEntry': '4' バイトのパディングを データ メンバー 'spine::EventQueueEntry::_type' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(333,8): warning C4820: 'spine::EventQueue': '7' バイトのパディングを データ メンバー 'spine::EventQueue::_drainDisabled' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(327,15): warning C4626: 'spine::EventQueue': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(474,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_animationsChanged' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(483,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_manualTrackEntryDisposal' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Player.h(28,7): warning C4099: 'Player': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+      C:\code\DirectXStart\Player.h(28,7):
+      'Player' の宣言を確認してください
+  
+C:\code\DirectXStart\Player.h(52,19): warning C4820: 'Player': '8' バイトのパディングを データ メンバー 'Player::constantBuffer' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(468,20):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::Pool<spine::TrackEntry>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(45,4):
+          クラス テンプレート メンバー関数 'spine::Pool<spine::TrackEntry>::~Pool(void)' のコンパイル中
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(46,19):
+          コンパイル対象の関数 テンプレート インスタンス化 'void spine::ContainerUtil::cleanUpVectorOfPointers<spine::TrackEntry>(spine::Vector<spine::TrackEntry *> &)' のリファレンスを確認してください
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(115,20): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warning C4820: 'spine::HashMap<spine::PropertyId,bool>::Entry': '7' バイトのパディングを データ メンバー 'spine::HashMap<spine::PropertyId,bool>::Entry::_value' の後に追加しました。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(473,29):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::HashMap<spine::PropertyId,bool>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(97,8):
+          クラス テンプレート メンバー関数 'void spine::HashMap<spine::PropertyId,bool>::clear(void)' のコンパイル中
+              C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(94,9):
+              'spine::HashMap<spine::PropertyId,bool>::~HashMap' の 'spine::HashMap<spine::PropertyId,bool>::clear' への最初の参照を参照してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
+          クラス 'spine::HashMap<spine::PropertyId,bool>::Entry' のコンパイル中
+  
+  Player.cpp
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
   (ソース ファイル 'Player.cpp' をコンパイルしています)
   
@@ -62,7 +266,7 @@ C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(483,8)
 C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
   (ソース ファイル 'Player.cpp' をコンパイルしています)
   
-C:\code\DirectXStart\Player.h(51,19): warning C4820: 'Player': '8' バイトのパディングを データ メンバー 'Player::constantBuffer' の後に追加しました。
+C:\code\DirectXStart\Player.h(52,19): warning C4820: 'Player': '8' バイトのパディングを データ メンバー 'Player::constantBuffer' の後に追加しました。
   (ソース ファイル 'Player.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SkeletonBinary.h(131,14): warning C4820: 'spine::SkeletonBinary': '3' バイトのパディングを データ メンバー 'spine::SkeletonBinary::_ownsLoader' の後に追加しました。
@@ -400,6 +604,10 @@ C:\code\DirectXStart\StateInfo.h(16,8): warning C4099: 'Player': タイプ名は
       C:\code\DirectXStart\Player.h(28,7):
       'Player' の宣言を確認してください
   
+C:\code\DirectXStart\Player.cpp(170,36): warning C4777: 'swprintf' : 書式文字列 '%08X' には、型 'unsigned int' の引数が必要ですが、可変個引数 1 は型 'HRESULT' です
+      C:\code\DirectXStart\Player.cpp(170,36):
+      書式文字列に '%lX' を使用することをお勧めします
+  
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(115,24): warning C5219: 'size_t' から 'float' への暗黙的な変換です。データが失われる可能性があります
   (ソース ファイル 'Player.cpp' をコンパイルしています)
       C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(115,24):
@@ -458,43 +666,150 @@ C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warni
           C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
           クラス 'spine::HashMap<spine::PropertyId,bool>::Entry' のコンパイル中
   
+  Render.cpp
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(201,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(202,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(212,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(213,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(123,7): warning C4820: 'spine::PowInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowInterpolation::power' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(134,7): warning C4820: 'spine::PowOutInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowOutInterpolation::power' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skeleton.h(265,15): warning C4820: 'spine::Skeleton': '4' バイトのパディングを データ メンバー 'spine::Skeleton::_time' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TextureRegion.h(43,22): warning C4820: 'spine::TextureRegion': '4' バイトのパディングを データ メンバー 'spine::TextureRegion::originalHeight' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(86,8): warning C4820: 'spine::AtlasPage': '3' バイトのパディングを データ メンバー 'spine::AtlasPage::pma' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(87,13): warning C4820: 'spine::AtlasPage': '4' バイトのパディングを データ メンバー 'spine::AtlasPage::index' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(102,10): warning C4820: 'spine::AtlasRegion': '4' バイトのパディングを データ メンバー 'spine::AtlasRegion::y' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(129,8): warning C4820: 'spine::Slot': '7' バイトのパディングを データ メンバー 'spine::Slot::_hasDarkColor' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C4626: 'spine::Slot': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C5027: 'spine::Slot': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(320,13): warning C4820: 'spine::EventQueueEntry': '4' バイトのパディングを データ メンバー 'spine::EventQueueEntry::_type' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(333,8): warning C4820: 'spine::EventQueue': '7' バイトのパディングを データ メンバー 'spine::EventQueue::_drainDisabled' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(327,15): warning C4626: 'spine::EventQueue': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(474,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_animationsChanged' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(483,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_manualTrackEntryDisposal' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Player.h(28,7): warning C4099: 'Player': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+      C:\code\DirectXStart\Player.h(28,7):
+      'Player' の宣言を確認してください
+  
+C:\code\DirectXStart\Player.h(52,19): warning C4820: 'Player': '8' バイトのパディングを データ メンバー 'Player::constantBuffer' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(468,20):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::Pool<spine::TrackEntry>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(45,4):
+          クラス テンプレート メンバー関数 'spine::Pool<spine::TrackEntry>::~Pool(void)' のコンパイル中
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(46,19):
+          コンパイル対象の関数 テンプレート インスタンス化 'void spine::ContainerUtil::cleanUpVectorOfPointers<spine::TrackEntry>(spine::Vector<spine::TrackEntry *> &)' のリファレンスを確認してください
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(115,20): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warning C4820: 'spine::HashMap<spine::PropertyId,bool>::Entry': '7' バイトのパディングを データ メンバー 'spine::HashMap<spine::PropertyId,bool>::Entry::_value' の後に追加しました。
+  (ソース ファイル 'Render.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(473,29):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::HashMap<spine::PropertyId,bool>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(97,8):
+          クラス テンプレート メンバー関数 'void spine::HashMap<spine::PropertyId,bool>::clear(void)' のコンパイル中
+              C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(94,9):
+              'spine::HashMap<spine::PropertyId,bool>::~HashMap' の 'spine::HashMap<spine::PropertyId,bool>::clear' への最初の参照を参照してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
+          クラス 'spine::HashMap<spine::PropertyId,bool>::Entry' のコンパイル中
+  
+  TextureLoader.cpp
+C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(201,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(202,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(212,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(213,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TextureRegion.h(43,22): warning C4820: 'spine::TextureRegion': '4' バイトのパディングを データ メンバー 'spine::TextureRegion::originalHeight' の後に追加しました。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(86,8): warning C4820: 'spine::AtlasPage': '3' バイトのパディングを データ メンバー 'spine::AtlasPage::pma' の後に追加しました。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(87,13): warning C4820: 'spine::AtlasPage': '4' バイトのパディングを データ メンバー 'spine::AtlasPage::index' の後に追加しました。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(102,10): warning C4820: 'spine::AtlasRegion': '4' バイトのパディングを データ メンバー 'spine::AtlasRegion::y' の後に追加しました。
+  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\TextureLoader.cpp(47,13): warning C4189: 'hr': ローカル変数が初期化されましたが、参照されていません
+C:\code\DirectXStart\TextureLoader.cpp(58,25): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
   Timer.cpp
   コードを生成中...
-C:\code\DirectXStart\Player.cpp(82,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\Player.cpp(82,1): warning C5045: C:\code\DirectXStart\Player.cpp(73) : 注: この行で比較を行ってインデックス '' の範囲を確認します
-C:\code\DirectXStart\Player.cpp(82,1): warning C5045: C:\code\DirectXStart\Player.cpp(82) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-C:\code\DirectXStart\Player.cpp(94,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\Player.cpp(94,1): warning C5045: C:\code\DirectXStart\Player.cpp(93) : 注: この行で比較を行ってインデックス 'i' の範囲を確認します
-C:\code\DirectXStart\Player.cpp(94,1): warning C5045: C:\code\DirectXStart\Player.cpp(140) : 注: この行にメモリの読み込みを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-main.obj : error LNK2019: 未解決の外部シンボル "public: virtual __cdecl spine::SpineExtension::~SpineExtension(void)" (??1SpineExtension@spine@@UEAA@XZ) が関数 "int `public: __cdecl spine::DebugExtension::DebugExtension(class DebugExtension::SpineExtension *)'::`1'::dtor$0" (?dtor$0@?0???0DebugExtension@spine@@QEAA@PEAVSpineExtension@1@@Z@4HA) で参照されました
-main.obj : error LNK2019: 未解決の外部シンボル "protected: __cdecl spine::SpineExtension::SpineExtension(void)" (??0SpineExtension@spine@@IEAA@XZ) が関数 "public: __cdecl spine::DebugExtension::DebugExtension(class spine::SpineExtension *)" (??0DebugExtension@spine@@QEAA@PEAVSpineExtension@1@@Z) で参照されました
-main.obj : error LNK2019: 未解決の外部シンボル "public: __cdecl spine::DefaultSpineExtension::DefaultSpineExtension(void)" (??0DefaultSpineExtension@spine@@QEAA@XZ) が関数 "class spine::SpineExtension * __cdecl spine::getDefaultExtension(void)" (?getDefaultExtension@spine@@YAPEAVSpineExtension@1@XZ) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: static class spine::SpineExtension * __cdecl spine::SpineExtension::getInstance(void)" (?getInstance@SpineExtension@spine@@SAPEAV12@XZ) が関数 "public: static char * __cdecl spine::SpineExtension::calloc<char>(unsigned __int64,char const *,int)" (??$calloc@D@SpineExtension@spine@@SAPEAD_KPEBDH@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: static void * __cdecl spine::SpineObject::operator new(unsigned __int64)" (??2SpineObject@spine@@SAPEAX_K@Z) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: static void __cdecl spine::SpineObject::operator delete(void *)" (??3SpineObject@spine@@SAXPEAX@Z) が関数 "public: virtual void * __cdecl spine::SpineObject::`scalar deleting destructor'(unsigned int)" (??_GSpineObject@spine@@UEAAPEAXI@Z) で参照されました
-TextureLoader.obj : error LNK2001: 外部シンボル "public: static void __cdecl spine::SpineObject::operator delete(void *)" (??3SpineObject@spine@@SAXPEAX@Z) は未解決です
-Player.obj : error LNK2019: 未解決の外部シンボル "public: virtual __cdecl spine::SpineObject::~SpineObject(void)" (??1SpineObject@spine@@UEAA@XZ) が関数 "int `public: __cdecl spine::String::String(char const *,bool,bool)'::`1'::dtor$0" (?dtor$0@?0???0String@spine@@QEAA@PEBD_N1@Z@4HA) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: __cdecl spine::Skeleton::Skeleton(class spine::SkeletonData *)" (??0Skeleton@spine@@QEAA@PEAVSkeletonData@1@@Z) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl spine::Skeleton::updateWorldTransform(enum spine::Physics)" (?updateWorldTransform@Skeleton@spine@@QEAAXW4Physics@2@@Z) が関数 "public: void __cdecl Player::Update(float)" (?Update@Player@@QEAAXM@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: class spine::Vector<class spine::Slot *> & __cdecl spine::Skeleton::getDrawOrder(void)" (?getDrawOrder@Skeleton@spine@@QEAAAEAV?$Vector@PEAVSlot@spine@@@2@XZ) が関数 "public: void __cdecl Player::Render(struct ID3D11DeviceContext *,struct StateInfo *,struct DirectX::XMMATRIX const &,struct DirectX::XMMATRIX const &)" (?Render@Player@@QEAAXPEAUID3D11DeviceContext@@PEAUStateInfo@@AEBUXMMATRIX@DirectX@@2@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: __cdecl spine::Atlas::Atlas(class spine::String const &,class spine::TextureLoader *,bool)" (??0Atlas@spine@@QEAA@AEBVString@1@PEAVTextureLoader@1@_N@Z) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: class spine::SlotData & __cdecl spine::Slot::getData(void)" (?getData@Slot@spine@@QEAAAEAVSlotData@2@XZ) が関数 "public: void __cdecl Player::Render(struct ID3D11DeviceContext *,struct StateInfo *,struct DirectX::XMMATRIX const &,struct DirectX::XMMATRIX const &)" (?Render@Player@@QEAAXPEAUID3D11DeviceContext@@PEAUStateInfo@@AEBUXMMATRIX@DirectX@@2@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: class spine::Attachment * __cdecl spine::Slot::getAttachment(void)" (?getAttachment@Slot@spine@@QEAAPEAVAttachment@2@XZ) が関数 "public: void __cdecl Player::Render(struct ID3D11DeviceContext *,struct StateInfo *,struct DirectX::XMMATRIX const &,struct DirectX::XMMATRIX const &)" (?Render@Player@@QEAAXPEAUID3D11DeviceContext@@PEAUStateInfo@@AEBUXMMATRIX@DirectX@@2@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: __cdecl spine::AnimationState::AnimationState(class spine::AnimationStateData *)" (??0AnimationState@spine@@QEAA@PEAVAnimationStateData@1@@Z) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl spine::AnimationState::update(float)" (?update@AnimationState@spine@@QEAAXM@Z) が関数 "public: void __cdecl Player::Update(float)" (?Update@Player@@QEAAXM@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: bool __cdecl spine::AnimationState::apply(class spine::Skeleton &)" (?apply@AnimationState@spine@@QEAA_NAEAVSkeleton@2@@Z) が関数 "public: void __cdecl Player::Update(float)" (?Update@Player@@QEAAXM@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: __cdecl spine::SkeletonBinary::SkeletonBinary(class spine::Atlas *)" (??0SkeletonBinary@spine@@QEAA@PEAVAtlas@1@@Z) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: virtual __cdecl spine::SkeletonBinary::~SkeletonBinary(void)" (??1SkeletonBinary@spine@@UEAA@XZ) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: class spine::SkeletonData * __cdecl spine::SkeletonBinary::readSkeletonDataFile(class spine::String const &)" (?readSkeletonDataFile@SkeletonBinary@spine@@QEAAPEAVSkeletonData@2@AEBVString@2@@Z) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: __cdecl spine::AnimationStateData::AnimationStateData(class spine::SkeletonData *)" (??0AnimationStateData@spine@@QEAA@PEAVSkeletonData@1@@Z) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl spine::AnimationStateData::setDefaultMix(float)" (?setDefaultMix@AnimationStateData@spine@@QEAAXM@Z) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl spine::AnimationStateData::setMix(class spine::String const &,class spine::String const &,float)" (?setMix@AnimationStateData@spine@@QEAAXAEBVString@2@0M@Z) が関数 "public: bool __cdecl Player::Load(struct ID3D11Device *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Load@Player@@QEAA_NPEAUID3D11Device@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: bool __cdecl spine::RTTI::isExactly(class spine::RTTI const &)const " (?isExactly@RTTI@spine@@QEBA_NAEBV12@@Z) が関数 "public: void __cdecl Player::Render(struct ID3D11DeviceContext *,struct StateInfo *,struct DirectX::XMMATRIX const &,struct DirectX::XMMATRIX const &)" (?Render@Player@@QEAAXPEAUID3D11DeviceContext@@PEAUStateInfo@@AEBUXMMATRIX@DirectX@@2@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl spine::RegionAttachment::computeWorldVertices(class spine::Slot &,float *,unsigned __int64,unsigned __int64)" (?computeWorldVertices@RegionAttachment@spine@@QEAAXAEAVSlot@2@PEAM_K2@Z) が関数 "public: void __cdecl Player::Render(struct ID3D11DeviceContext *,struct StateInfo *,struct DirectX::XMMATRIX const &,struct DirectX::XMMATRIX const &)" (?Render@Player@@QEAAXPEAUID3D11DeviceContext@@PEAUStateInfo@@AEBUXMMATRIX@DirectX@@2@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: class spine::TextureRegion * __cdecl spine::RegionAttachment::getRegion(void)" (?getRegion@RegionAttachment@spine@@QEAAPEAVTextureRegion@2@XZ) が関数 "public: void __cdecl Player::Render(struct ID3D11DeviceContext *,struct StateInfo *,struct DirectX::XMMATRIX const &,struct DirectX::XMMATRIX const &)" (?Render@Player@@QEAAXPEAUID3D11DeviceContext@@PEAUStateInfo@@AEBUXMMATRIX@DirectX@@2@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: class spine::Vector<float> & __cdecl spine::RegionAttachment::getUVs(void)" (?getUVs@RegionAttachment@spine@@QEAAAEAV?$Vector@M@2@XZ) が関数 "public: void __cdecl Player::Render(struct ID3D11DeviceContext *,struct StateInfo *,struct DirectX::XMMATRIX const &,struct DirectX::XMMATRIX const &)" (?Render@Player@@QEAAXPEAUID3D11DeviceContext@@PEAUStateInfo@@AEBUXMMATRIX@DirectX@@2@Z) で参照されました
-Player.obj : error LNK2019: 未解決の外部シンボル "public: enum spine::BlendMode __cdecl spine::SlotData::getBlendMode(void)" (?getBlendMode@SlotData@spine@@QEAA?AW4BlendMode@2@XZ) が関数 "public: void __cdecl Player::Render(struct ID3D11DeviceContext *,struct StateInfo *,struct DirectX::XMMATRIX const &,struct DirectX::XMMATRIX const &)" (?Render@Player@@QEAAXPEAUID3D11DeviceContext@@PEAUStateInfo@@AEBUXMMATRIX@DirectX@@2@Z) で参照されました
-Player.obj : error LNK2001: 外部シンボル "public: static class spine::RTTI const spine::RegionAttachment::rtti" (?rtti@RegionAttachment@spine@@2VRTTI@2@B) は未解決です
-TextureLoader.obj : error LNK2019: 未解決の外部シンボル "public: __cdecl spine::TextureLoader::TextureLoader(void)" (??0TextureLoader@spine@@QEAA@XZ) が関数 "public: __cdecl SpineTextureLoader::SpineTextureLoader(struct ID3D11Device *)" (??0SpineTextureLoader@@QEAA@PEAUID3D11Device@@@Z) で参照されました
-TextureLoader.obj : error LNK2019: 未解決の外部シンボル "public: virtual __cdecl spine::TextureLoader::~TextureLoader(void)" (??1TextureLoader@spine@@UEAA@XZ) が関数 "public: virtual __cdecl SpineTextureLoader::~SpineTextureLoader(void)" (??1SpineTextureLoader@@UEAA@XZ) で参照されました
-C:\code\DirectXStart\x64\Debug\DirectXStart.exe : fatal error LNK1120: 30 件の未解決の外部参照
+C:\code\DirectXStart\TextureLoader.cpp(26,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\TextureLoader.cpp(26,1): warning C5045: C:\code\DirectXStart\TextureLoader.cpp(21) : 注: この行で比較を行ってインデックス 'hr' の範囲を確認します
+C:\code\DirectXStart\TextureLoader.cpp(26,1): warning C5045: C:\code\DirectXStart\TextureLoader.cpp(26) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(101,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(101,1): warning C5045: C:\code\DirectXStart\Player.cpp(92) : 注: この行で比較を行ってインデックス '' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(101,1): warning C5045: C:\code\DirectXStart\Player.cpp(101) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(113,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(113,1): warning C5045: C:\code\DirectXStart\Player.cpp(112) : 注: この行で比較を行ってインデックス 'i' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(113,1): warning C5045: C:\code\DirectXStart\Player.cpp(159) : 注: この行にメモリの読み込みを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\main.cpp(205,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\main.cpp(205,1): warning C5045: C:\code\DirectXStart\main.cpp(204) : 注: この行で比較を行ってインデックス 'height' の範囲を確認します
+C:\code\DirectXStart\main.cpp(205,1): warning C5045: C:\code\DirectXStart\main.cpp(205) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+  DirectXStart.vcxproj -> C:\code\DirectXStart\x64\Debug\DirectXStart.exe

@@ -35,6 +35,7 @@ public:
         const DirectX::XMMATRIX& view,
         const DirectX::XMMATRIX& projection);
     bool InitBuffers(ID3D11Device* device);
+    bool InitConstantBuffer(ID3D11Device* device);
     void UpdateConstantBuffer(ID3D11DeviceContext* context, const DirectX::XMMATRIX& view, const DirectX::XMMATRIX& projection);
 
 private:
