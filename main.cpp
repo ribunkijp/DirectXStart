@@ -17,6 +17,18 @@
 #include "d3dApp.h"
 #include "Timer.h"
 #include "Render.h"
+#include <spine/Extension.h>
+#include <spine/Debug.h>
+
+
+
+static spine::DebugExtension* debugExtension = NULL;
+
+// 由Spine自动调用，用于自定义内存管理
+spine::SpineExtension* spine::getDefaultExtension() {
+    debugExtension = new spine::DebugExtension(new spine::DefaultSpineExtension());
+    return debugExtension;
+}
 
 
 void GetScaledWindowSizeAndPosition(float logicalWidth, float logicalHeight,
@@ -173,6 +185,8 @@ LRESULT CALLBACK WindowProc(
             pState = nullptr;
         }
         PostQuitMessage(0);
+        if (debugExtension) debugExtension->reportLeaks();
+
         return 0;
     case WM_SIZE:
     {
