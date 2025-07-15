@@ -21,7 +21,7 @@
 
 //
 // D3Dを初期化する関数
-bool InitD3D(HWND hwnd, StateInfo* state, float clientWidth, float clientHeight);
+bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* state, float clientWidth, float clientHeight);
 
 //
 // D3Dのリソースを解放する関数

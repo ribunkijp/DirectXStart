@@ -9,9 +9,10 @@
 
 #include "d3dApp.h"
 #include "ConstantBuffer.h"
+#include "Player.h"
 
 
-bool InitD3D(HWND hwnd, StateInfo* pState, float clientWidth, float clientHeight) {
+bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWidth, float clientHeight) {
     /*
        元のモデル座標（モデル中心が原点）
             ↓ worldMatrix（平行移動・拡大縮小）
@@ -273,6 +274,15 @@ bool InitD3D(HWND hwnd, StateInfo* pState, float clientWidth, float clientHeight
     hr = pState->device->CreateDepthStencilState(&transparentDepthStencilDesc, &pState->depthStencilStateTransparent);
     if (FAILED(hr)) {
         MessageBox(hwnd, L"Failed to create transparent depth stencil state.", L"Error", MB_OK);
+        return false;
+    }
+
+
+    pState->player = new Player();
+
+    bool createPlayer = pState->player->Load(device, "assets/spineboy-pro.atlas", "assets/spineboy-pro.skel");
+    if (!createPlayer) {
+        MessageBox(hwnd, L"Failed to create player", L"Error", MB_OK);
         return false;
     }
 

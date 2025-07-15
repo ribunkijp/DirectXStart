@@ -49,6 +49,10 @@ void Player::Update(float deltaTime) {
     m_skeleton->updateWorldTransform(spine::Physics_None);
 }
 
+void Player::Render(ID3D11DeviceContext* context) {
+
+}
+
 Player::~Player () {
     delete m_animationStateData;
     delete m_animationState;

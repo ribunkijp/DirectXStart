@@ -23,6 +23,7 @@ public:
     ~Player();
     bool Load(ID3D11Device* device, const std::string& atlasPath, const std::string& skelPath);
     void Update(float delaTime);
+    void Render(ID3D11DeviceContext* context);
 
 private:
     SpineTextureLoader* m_loader;

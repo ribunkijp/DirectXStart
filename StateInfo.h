@@ -12,6 +12,7 @@
 
 #include <d3d11.h>//ID3D11Device
 #include <DirectXMath.h>
+#include "Player.h"
 
 
 struct StateInfo {
@@ -37,6 +38,8 @@ struct StateInfo {
 
     float logicalWidth = 1888.0f;
     float logicalHeight = 1062.0f;
+
+    Player* player = nullptr;
 
 };
 

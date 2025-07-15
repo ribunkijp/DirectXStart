@@ -116,7 +116,7 @@ int WINAPI wWinMain(
     float clientWidth = static_cast<float>(rect.right - rect.left);
     float clientHeight = static_cast<float>(rect.bottom - rect.top);
 
-    if (!InitD3D(hwnd, pState, clientWidth, clientHeight)) {
+    if (!InitD3D(hwnd, pState->device, pState, clientWidth, clientHeight)) {
         MessageBox(hwnd, L"D3D 初始化失败!", L"错误", MB_OK);
         return 0;
     }
