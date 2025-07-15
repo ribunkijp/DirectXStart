@@ -66,7 +66,9 @@ float4 PSMain(PS_INPUT input) : SV_TARGET
     float4 textureColor = shaderTexture.Sample(SamplerClamp, input.tex);
 
     // テクスチャの色だけを使う：
-    return textureColor;
+   return textureColor;
+    
+    //return float4(1, 0, 0, 1);
     
      // 頂点シェーダーから渡された色をそのまま出力する場合。各ピクセルの色は頂点から補間されたものになる。
     //return input.col;

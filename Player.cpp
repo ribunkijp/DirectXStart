@@ -112,7 +112,14 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
     for (size_t i = 0; i < drawOrder.size(); ++i) {
         spine::Slot* slot = drawOrder[i];
         spine::Attachment* attachment = slot->getAttachment();
-        if (!attachment) continue;
+        //if (!attachment) continue;
+        const char* slotName = slot->getData().getName().buffer();
+        char buf[256];
+        if (!attachment) {
+            sprintf_s(buf, sizeof(buf), "[slot] %s: null\n", slotName);
+            OutputDebugStringA(buf);
+            continue;
+        }
 
         spine::BlendMode blendMode = slot->getData().getBlendMode();
         switch (blendMode) {
@@ -162,13 +169,44 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
                 vertices[v].b = 1.0f;
                 vertices[v].a = 1.0f;
             }
+            /*vertices[0].x = 844.0f;
+            vertices[0].y = 431.0f;
+            vertices[0].u = 0.0f;
+            vertices[0].v = 0.0f;
+            vertices[0].r = 1.0f;
+            vertices[0].g = 1.0f;
+            vertices[0].b = 1.0f;
+            vertices[0].a = 1.0f;
+            vertices[1].x = 1044.0f;
+            vertices[1].y = 431.0f;
+            vertices[1].u = 1.0f;
+            vertices[1].v = 0.0f;
+            vertices[1].r = 1.0f;
+            vertices[1].g = 1.0f;
+            vertices[1].b = 1.0f;
+            vertices[1].a = 1.0f;
+            vertices[2].x = 1044.0f;
+            vertices[2].y = 631.0f;
+            vertices[2].u = 1.0f;
+            vertices[2].v = 1.0f;
+            vertices[2].r = 1.0f;
+            vertices[2].g = 1.0f;
+            vertices[2].b = 1.0f;
+            vertices[2].a = 1.0f;
+            vertices[3].x = 844.0f;
+            vertices[3].y = 631.0f;
+            vertices[3].u = 0.0f;
+            vertices[3].v = 1.0f;
+            vertices[3].r = 1.0f;
+            vertices[3].g = 1.0f;
+            vertices[3].b = 1.0f;
+            vertices[3].a = 1.0f;*/
+       
+
             // 5. 写入顶点buffer
             D3D11_MAPPED_SUBRESOURCE mapped;
             HRESULT hr = context->Map(m_vertexBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mapped);
             if (FAILED(hr)) {
-                wchar_t msg[256];
-                swprintf(msg, 256, L"Failed to map vertex buffer. HRESULT=0x%08X", hr);
-                MessageBox(nullptr, msg, L"Error", MB_OK | MB_ICONERROR);
                 return;
             }
             memcpy(mapped.pData, vertices, sizeof(vertices));

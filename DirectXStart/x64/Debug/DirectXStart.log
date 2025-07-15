@@ -1,208 +1,4 @@
-﻿  BufferUtils.cpp
-  d3dApp.cpp
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(201,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(202,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(212,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(213,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(123,7): warning C4820: 'spine::PowInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowInterpolation::power' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(134,7): warning C4820: 'spine::PowOutInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowOutInterpolation::power' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skeleton.h(265,15): warning C4820: 'spine::Skeleton': '4' バイトのパディングを データ メンバー 'spine::Skeleton::_time' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TextureRegion.h(43,22): warning C4820: 'spine::TextureRegion': '4' バイトのパディングを データ メンバー 'spine::TextureRegion::originalHeight' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(86,8): warning C4820: 'spine::AtlasPage': '3' バイトのパディングを データ メンバー 'spine::AtlasPage::pma' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(87,13): warning C4820: 'spine::AtlasPage': '4' バイトのパディングを データ メンバー 'spine::AtlasPage::index' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(102,10): warning C4820: 'spine::AtlasRegion': '4' バイトのパディングを データ メンバー 'spine::AtlasRegion::y' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(129,8): warning C4820: 'spine::Slot': '7' バイトのパディングを データ メンバー 'spine::Slot::_hasDarkColor' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C4626: 'spine::Slot': 代入演算子は暗黙的に削除済みとして定義されました
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C5027: 'spine::Slot': 移動代入演算子が暗黙的に削除済みとして定義されました
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(320,13): warning C4820: 'spine::EventQueueEntry': '4' バイトのパディングを データ メンバー 'spine::EventQueueEntry::_type' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(333,8): warning C4820: 'spine::EventQueue': '7' バイトのパディングを データ メンバー 'spine::EventQueue::_drainDisabled' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(327,15): warning C4626: 'spine::EventQueue': 代入演算子は暗黙的に削除済みとして定義されました
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(474,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_animationsChanged' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(483,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_manualTrackEntryDisposal' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\DirectXStart\Player.h(28,7): warning C4099: 'Player': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-      C:\code\DirectXStart\Player.h(28,7):
-      'Player' の宣言を確認してください
-  
-C:\code\DirectXStart\Player.h(52,19): warning C4820: 'Player': '8' バイトのパディングを データ メンバー 'Player::constantBuffer' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\DirectXStart\d3dApp.cpp(15,39): warning C4100: 'device': 参照されないパラメーター
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21):
-      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(468,20):
-          コンパイル対象の クラス テンプレート インスタンス化 'spine::Pool<spine::TrackEntry>' のリファレンスを確認してください
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(45,4):
-          クラス テンプレート メンバー関数 'spine::Pool<spine::TrackEntry>::~Pool(void)' のコンパイル中
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(46,19):
-          コンパイル対象の関数 テンプレート インスタンス化 'void spine::ContainerUtil::cleanUpVectorOfPointers<spine::TrackEntry>(spine::Vector<spine::TrackEntry *> &)' のリファレンスを確認してください
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(115,20): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warning C4820: 'spine::HashMap<spine::PropertyId,bool>::Entry': '7' バイトのパディングを データ メンバー 'spine::HashMap<spine::PropertyId,bool>::Entry::_value' の後に追加しました。
-  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
-      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6):
-      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(473,29):
-          コンパイル対象の クラス テンプレート インスタンス化 'spine::HashMap<spine::PropertyId,bool>' のリファレンスを確認してください
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(97,8):
-          クラス テンプレート メンバー関数 'void spine::HashMap<spine::PropertyId,bool>::clear(void)' のコンパイル中
-              C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(94,9):
-              'spine::HashMap<spine::PropertyId,bool>::~HashMap' の 'spine::HashMap<spine::PropertyId,bool>::clear' への最初の参照を参照してください
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
-          クラス 'spine::HashMap<spine::PropertyId,bool>::Entry' のコンパイル中
-  
-  GameObject.cpp
-  main.cpp
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(201,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(202,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(212,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(213,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Debug.h(45,8): warning C4820: 'spine::DebugExtension::Allocation': '4' バイトのパディングを データ メンバー 'spine::DebugExtension::Allocation::line' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(123,7): warning C4820: 'spine::PowInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowInterpolation::power' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(134,7): warning C4820: 'spine::PowOutInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowOutInterpolation::power' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skeleton.h(265,15): warning C4820: 'spine::Skeleton': '4' バイトのパディングを データ メンバー 'spine::Skeleton::_time' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TextureRegion.h(43,22): warning C4820: 'spine::TextureRegion': '4' バイトのパディングを データ メンバー 'spine::TextureRegion::originalHeight' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(86,8): warning C4820: 'spine::AtlasPage': '3' バイトのパディングを データ メンバー 'spine::AtlasPage::pma' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(87,13): warning C4820: 'spine::AtlasPage': '4' バイトのパディングを データ メンバー 'spine::AtlasPage::index' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(102,10): warning C4820: 'spine::AtlasRegion': '4' バイトのパディングを データ メンバー 'spine::AtlasRegion::y' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(129,8): warning C4820: 'spine::Slot': '7' バイトのパディングを データ メンバー 'spine::Slot::_hasDarkColor' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C4626: 'spine::Slot': 代入演算子は暗黙的に削除済みとして定義されました
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C5027: 'spine::Slot': 移動代入演算子が暗黙的に削除済みとして定義されました
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(320,13): warning C4820: 'spine::EventQueueEntry': '4' バイトのパディングを データ メンバー 'spine::EventQueueEntry::_type' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(333,8): warning C4820: 'spine::EventQueue': '7' バイトのパディングを データ メンバー 'spine::EventQueue::_drainDisabled' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(327,15): warning C4626: 'spine::EventQueue': 代入演算子は暗黙的に削除済みとして定義されました
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(474,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_animationsChanged' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(483,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_manualTrackEntryDisposal' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\DirectXStart\Player.h(28,7): warning C4099: 'Player': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-      C:\code\DirectXStart\Player.h(28,7):
-      'Player' の宣言を確認してください
-  
-C:\code\DirectXStart\Player.h(52,19): warning C4820: 'Player': '8' バイトのパディングを データ メンバー 'Player::constantBuffer' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21):
-      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(468,20):
-          コンパイル対象の クラス テンプレート インスタンス化 'spine::Pool<spine::TrackEntry>' のリファレンスを確認してください
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(45,4):
-          クラス テンプレート メンバー関数 'spine::Pool<spine::TrackEntry>::~Pool(void)' のコンパイル中
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(46,19):
-          コンパイル対象の関数 テンプレート インスタンス化 'void spine::ContainerUtil::cleanUpVectorOfPointers<spine::TrackEntry>(spine::Vector<spine::TrackEntry *> &)' のリファレンスを確認してください
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(115,20): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warning C4820: 'spine::HashMap<spine::PropertyId,bool>::Entry': '7' バイトのパディングを データ メンバー 'spine::HashMap<spine::PropertyId,bool>::Entry::_value' の後に追加しました。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6):
-      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(473,29):
-          コンパイル対象の クラス テンプレート インスタンス化 'spine::HashMap<spine::PropertyId,bool>' のリファレンスを確認してください
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(97,8):
-          クラス テンプレート メンバー関数 'void spine::HashMap<spine::PropertyId,bool>::clear(void)' のコンパイル中
-              C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(94,9):
-              'spine::HashMap<spine::PropertyId,bool>::~HashMap' の 'spine::HashMap<spine::PropertyId,bool>::clear' への最初の参照を参照してください
-          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
-          クラス 'spine::HashMap<spine::PropertyId,bool>::Entry' のコンパイル中
-  
-  Player.cpp
+﻿  Player.cpp
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
   (ソース ファイル 'Player.cpp' をコンパイルしています)
   
@@ -604,10 +400,6 @@ C:\code\DirectXStart\StateInfo.h(16,8): warning C4099: 'Player': タイプ名は
       C:\code\DirectXStart\Player.h(28,7):
       'Player' の宣言を確認してください
   
-C:\code\DirectXStart\Player.cpp(170,36): warning C4777: 'swprintf' : 書式文字列 '%08X' には、型 'unsigned int' の引数が必要ですが、可変個引数 1 は型 'HRESULT' です
-      C:\code\DirectXStart\Player.cpp(170,36):
-      書式文字列に '%lX' を使用することをお勧めします
-  
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(115,24): warning C5219: 'size_t' から 'float' への暗黙的な変換です。データが失われる可能性があります
   (ソース ファイル 'Player.cpp' をコンパイルしています)
       C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(115,24):
@@ -666,80 +458,81 @@ C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warni
           C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
           クラス 'spine::HashMap<spine::PropertyId,bool>::Entry' のコンパイル中
   
-  Render.cpp
+  d3dApp.cpp
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(201,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(202,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(212,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(213,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(123,7): warning C4820: 'spine::PowInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowInterpolation::power' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(134,7): warning C4820: 'spine::PowOutInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowOutInterpolation::power' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skeleton.h(265,15): warning C4820: 'spine::Skeleton': '4' バイトのパディングを データ メンバー 'spine::Skeleton::_time' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TextureRegion.h(43,22): warning C4820: 'spine::TextureRegion': '4' バイトのパディングを データ メンバー 'spine::TextureRegion::originalHeight' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(86,8): warning C4820: 'spine::AtlasPage': '3' バイトのパディングを データ メンバー 'spine::AtlasPage::pma' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(87,13): warning C4820: 'spine::AtlasPage': '4' バイトのパディングを データ メンバー 'spine::AtlasPage::index' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(102,10): warning C4820: 'spine::AtlasRegion': '4' バイトのパディングを データ メンバー 'spine::AtlasRegion::y' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(129,8): warning C4820: 'spine::Slot': '7' バイトのパディングを データ メンバー 'spine::Slot::_hasDarkColor' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C4626: 'spine::Slot': 代入演算子は暗黙的に削除済みとして定義されました
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C5027: 'spine::Slot': 移動代入演算子が暗黙的に削除済みとして定義されました
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(320,13): warning C4820: 'spine::EventQueueEntry': '4' バイトのパディングを データ メンバー 'spine::EventQueueEntry::_type' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(333,8): warning C4820: 'spine::EventQueue': '7' バイトのパディングを データ メンバー 'spine::EventQueue::_drainDisabled' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(327,15): warning C4626: 'spine::EventQueue': 代入演算子は暗黙的に削除済みとして定義されました
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(474,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_animationsChanged' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(483,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_manualTrackEntryDisposal' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\DirectXStart\Player.h(28,7): warning C4099: 'Player': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
       C:\code\DirectXStart\Player.h(28,7):
       'Player' の宣言を確認してください
   
 C:\code\DirectXStart\Player.h(52,19): warning C4820: 'Player': '8' バイトのパディングを データ メンバー 'Player::constantBuffer' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
+C:\code\DirectXStart\d3dApp.cpp(15,39): warning C4100: 'device': 参照されないパラメーター
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
       C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21):
       テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
           C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(468,20):
@@ -750,10 +543,10 @@ C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21)
           コンパイル対象の関数 テンプレート インスタンス化 'void spine::ContainerUtil::cleanUpVectorOfPointers<spine::TrackEntry>(spine::Vector<spine::TrackEntry *> &)' のリファレンスを確認してください
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(115,20): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warning C4820: 'spine::HashMap<spine::PropertyId,bool>::Entry': '7' バイトのパディングを データ メンバー 'spine::HashMap<spine::PropertyId,bool>::Entry::_value' の後に追加しました。
-  (ソース ファイル 'Render.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
       C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6):
       テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
           C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(473,29):
@@ -765,51 +558,11 @@ C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warni
           C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
           クラス 'spine::HashMap<spine::PropertyId,bool>::Entry' のコンパイル中
   
-  TextureLoader.cpp
-C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(201,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(202,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(212,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(213,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TextureRegion.h(43,22): warning C4820: 'spine::TextureRegion': '4' バイトのパディングを データ メンバー 'spine::TextureRegion::originalHeight' の後に追加しました。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(86,8): warning C4820: 'spine::AtlasPage': '3' バイトのパディングを データ メンバー 'spine::AtlasPage::pma' の後に追加しました。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(87,13): warning C4820: 'spine::AtlasPage': '4' バイトのパディングを データ メンバー 'spine::AtlasPage::index' の後に追加しました。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(102,10): warning C4820: 'spine::AtlasRegion': '4' バイトのパディングを データ メンバー 'spine::AtlasRegion::y' の後に追加しました。
-  (ソース ファイル 'TextureLoader.cpp' をコンパイルしています)
-  
-C:\code\DirectXStart\TextureLoader.cpp(47,13): warning C4189: 'hr': ローカル変数が初期化されましたが、参照されていません
-C:\code\DirectXStart\TextureLoader.cpp(58,25): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
-  Timer.cpp
   コードを生成中...
-C:\code\DirectXStart\TextureLoader.cpp(26,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\TextureLoader.cpp(26,1): warning C5045: C:\code\DirectXStart\TextureLoader.cpp(21) : 注: この行で比較を行ってインデックス 'hr' の範囲を確認します
-C:\code\DirectXStart\TextureLoader.cpp(26,1): warning C5045: C:\code\DirectXStart\TextureLoader.cpp(26) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
 C:\code\DirectXStart\Player.cpp(101,1): warning C5045: /Qspectre スイッチが 
 C:\code\DirectXStart\Player.cpp(101,1): warning C5045: C:\code\DirectXStart\Player.cpp(92) : 注: この行で比較を行ってインデックス '' の範囲を確認します
 C:\code\DirectXStart\Player.cpp(101,1): warning C5045: C:\code\DirectXStart\Player.cpp(101) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-C:\code\DirectXStart\Player.cpp(113,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\Player.cpp(113,1): warning C5045: C:\code\DirectXStart\Player.cpp(112) : 注: この行で比較を行ってインデックス 'i' の範囲を確認します
-C:\code\DirectXStart\Player.cpp(113,1): warning C5045: C:\code\DirectXStart\Player.cpp(159) : 注: この行にメモリの読み込みを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-C:\code\DirectXStart\main.cpp(205,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\main.cpp(205,1): warning C5045: C:\code\DirectXStart\main.cpp(204) : 注: この行で比較を行ってインデックス 'height' の範囲を確認します
-C:\code\DirectXStart\main.cpp(205,1): warning C5045: C:\code\DirectXStart\main.cpp(205) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(116,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(116,1): warning C5045: C:\code\DirectXStart\Player.cpp(115) : 注: この行で比較を行ってインデックス 'i' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(116,1): warning C5045: C:\code\DirectXStart\Player.cpp(169) : 注: この行にメモリの読み込みを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
   DirectXStart.vcxproj -> C:\code\DirectXStart\x64\Debug\DirectXStart.exe

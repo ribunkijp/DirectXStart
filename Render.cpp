@@ -72,7 +72,7 @@ void Render(HWND hwnd, StateInfo* pState) {
     //}
 
     //// バックバッファ（描画が終わったバッファ）とフロントバッファ（画面に表示されているバッファ）を交換
-    //pState->swapChain->Present(1, 0);
+    pState->swapChain->Present(1, 0);
 
     EndPaint(hwnd, &ps);
 }
