@@ -12,6 +12,6 @@
 struct Vertex;
 
 
-ID3D11Buffer* CreateQuadVertexBuffer(ID3D11Device* device, Vertex* vertices, unsigned vertices_count);
+ID3D11Buffer* CreateDynamicVertexBuffer(ID3D11Device* device, size_t vertices_count);
 
-ID3D11Buffer* CreateQuadIndexBuffer(ID3D11Device* device);
+ID3D11Buffer* CreateDynamicIndexBuffer(ID3D11Device* device, size_t indexCount);

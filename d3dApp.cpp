@@ -24,6 +24,9 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
             ↓ グラフィックスパイプラインによる自動マッピング
        画面ピクセル位置
    */
+    char buf[128];
+    sprintf_s(buf, sizeof(buf), "logicalWidth: %.2f, logicalHeight: %.2f\n", pState->logicalWidth, pState->logicalHeight);
+    OutputDebugStringA(buf);
    // カメラ位置と向きを設定
     pState->view = DirectX::XMMatrixIdentity(); // まずは単位行列、カメラ位置を設定したら更新できる
     // 3D/2D ワールドを画面にマッピング
@@ -205,8 +208,8 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
     //入力レイアウト作成
     D3D11_INPUT_ELEMENT_DESC layout[] = {
         {"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,    0, 0,   D3D11_INPUT_PER_VERTEX_DATA, 0},  
-        {"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,       0, 8,  D3D11_INPUT_PER_VERTEX_DATA, 0},  
-        {"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 16,  D3D11_INPUT_PER_VERTEX_DATA, 0} 
+        {"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,       0, 12,  D3D11_INPUT_PER_VERTEX_DATA, 0},  
+        {"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 20,  D3D11_INPUT_PER_VERTEX_DATA, 0} 
     };
 
     hr = pState->device->CreateInputLayout(
@@ -257,7 +260,7 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
     // D3D11_COLOR_WRITE_ENABLE_ALL は全色成分(RGBA)書込可
     blendDesc.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
 
-    hr = pState->device->CreateBlendState(&blendDesc, &pState->blendState);
+    hr = pState->device->CreateBlendState(&blendDesc, &pState->blendStateNormal);
     if (FAILED(hr)) {
         MessageBox(hwnd, L"Failed to create blend state.", L"Error", MB_OK);
         return false;
@@ -344,10 +347,6 @@ void CleanupD3D(StateInfo* pState) {
     if (pState->rtv) { // レンダーターゲットビュー解放
         pState->rtv->Release();
         pState->rtv = nullptr;
-    }
-    if (pState->blendState) { // ブレンドステート解放
-        pState->blendState->Release();
-        pState->blendState = nullptr;
     }
 
 

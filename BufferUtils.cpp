@@ -9,28 +9,26 @@
 #include "BufferUtils.h"
 #include "Vertex.h"
 
-ID3D11Buffer* CreateQuadVertexBuffer(ID3D11Device* device, Vertex* vertices, unsigned vertices_count) {
+ID3D11Buffer* CreateDynamicVertexBuffer(ID3D11Device* device, size_t vertices_count) {
 
     D3D11_BUFFER_DESC bd = {};// Direct3D 11 でバッファの属性を記述する構造体
     bd.Usage = D3D11_USAGE_DYNAMIC;              
-    bd.ByteWidth = sizeof(Vertex) * vertices_count;             // バッファのサイズ＝頂点全体のサイズ
+    bd.ByteWidth = static_cast<UINT>(sizeof(Vertex) * vertices_count);             // バッファのサイズ＝頂点全体のサイズ
     bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;     // 頂点バッファとして使用
     bd.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE; 
-
-    D3D11_SUBRESOURCE_DATA initData = {};//D3D11_SUBRESOURCE_DATA はバッファ初期化用の構造体
-    initData.pSysMem = vertices;// GPU上のバッファを初期化するためのデータへのポインタ
-
+    bd.MiscFlags = 0;
+    bd.StructureByteStride = 0;
     // Direct3D 11 の頂点バッファへのポインタ、初期値は nullptr（ヌルポインタ）
     ID3D11Buffer* vertexBuffer = nullptr;
     // GPU上にバッファを作成する
-    HRESULT hr = device->CreateBuffer(&bd, &initData, &vertexBuffer);
+    HRESULT hr = device->CreateBuffer(&bd, nullptr, &vertexBuffer);
     if (FAILED(hr)) {
         // エラー処理
         return nullptr;
     }
     return vertexBuffer;
 }
-ID3D11Buffer* CreateQuadIndexBuffer(ID3D11Device* device)
+ID3D11Buffer* CreateDynamicIndexBuffer(ID3D11Device* device, size_t indexCount)
 {
     // 矩形のインデックス配列を定義。合計6つのインデックスで、2つの三角形から矩形を描画
     // 三角形1の頂点インデックス: 0, 1, 2

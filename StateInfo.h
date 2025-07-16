@@ -29,7 +29,6 @@ struct StateInfo {
     ID3D11VertexShader* vertexShader = nullptr;// 頂点シェーダー：各頂点の処理を行うシェーダー
     ID3D11PixelShader* pixelShader = nullptr; // ピクセルシェーダー：各ピクセルの色を決定するシェーダー
     ID3D11SamplerState* samplerState = nullptr;// テクスチャサンプリング用のサンプラーステート
-    ID3D11BlendState* blendState = nullptr;// 透過ブレンド用
     ID3D11DepthStencilState* depthStencilStateTransparent = nullptr;// 透過物体用の深度ステンシル状態
     // 深度/ステンシルバッファビューのインターフェースポインタ。GPUが深度/ステンシルバッファへアクセス・操作するためのもの
     ID3D11DepthStencilView* depthStencilView = nullptr;

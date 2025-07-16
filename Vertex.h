@@ -4,7 +4,7 @@
 #include <cstdint>
 
 struct Vertex {
-    float x, y;
+    float x, y, z;
     float u, v;
     float r, g, b, a;
 };

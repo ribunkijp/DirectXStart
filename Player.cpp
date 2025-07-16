@@ -36,6 +36,17 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
     spine::SkeletonBinary binary(m_atlas);
     m_skeletonData = binary.readSkeletonDataFile(skelPath.c_str());
     m_skeleton = new spine::Skeleton(m_skeletonData);
+
+    if (!m_skeletonData) {
+        OutputDebugStringA("skeletonData load failed!\n");
+        return false;
+    }
+    if (!m_skeleton) {
+        OutputDebugStringA("skeleton is null!\n");
+    }
+
+    m_skeleton->setX(300.0f);
+    m_skeleton->setY(400.0f); 
    
     spine::AnimationStateData* animationStateData = new spine::AnimationStateData(m_skeletonData);
     animationStateData->setDefaultMix(0.1f);
@@ -44,7 +55,7 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
     m_animationStateData = animationStateData;
     m_animationState = animationState;
     
-    m_animationState->setAnimation(0, "walk", true);
+    m_animationState->setAnimation(0, "hoverboard", true);
    
     if (!InitBuffers(device)) {
         return false;
@@ -98,6 +109,7 @@ void Player::UpdateConstantBuffer(ID3D11DeviceContext* context, const DirectX::X
         cb->texOffset[1] = texOffset[1];
         cb->texScale[0] = texScale[0];
         cb->texScale[1] = texScale[1];
+
         context->Unmap(constantBuffer, 0);
     }
 }
@@ -112,14 +124,7 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
     for (size_t i = 0; i < drawOrder.size(); ++i) {
         spine::Slot* slot = drawOrder[i];
         spine::Attachment* attachment = slot->getAttachment();
-        //if (!attachment) continue;
-        const char* slotName = slot->getData().getName().buffer();
-        char buf[256];
-        if (!attachment) {
-            sprintf_s(buf, sizeof(buf), "[slot] %s: null\n", slotName);
-            OutputDebugStringA(buf);
-            continue;
-        }
+        if (!attachment) continue;
 
         spine::BlendMode blendMode = slot->getData().getBlendMode();
         switch (blendMode) {
@@ -136,8 +141,11 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
             context->OMSetBlendState(pState->blendStateScreen, nullptr, 0xffffffff);
             break;
         }
-        
 
+
+        std::vector<Vertex> vertices;
+        std::vector<UINT> indices;
+        ID3D11ShaderResourceView* srv = nullptr;
         if (attachment->getRTTI().isExactly(spine::RegionAttachment::rtti)) {
             // ---- 下面这些代码直接放这里！----
             auto* region = static_cast<spine::RegionAttachment*>(attachment);
@@ -154,14 +162,15 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
             spine::TextureRegion* texRegion = region->getRegion();
             spine::AtlasRegion* atlasRegion = static_cast<spine::AtlasRegion*>(texRegion);
             spine::AtlasPage* page = atlasRegion->page;
-            ID3D11ShaderResourceView* srv = reinterpret_cast<ID3D11ShaderResourceView*>(page->texture);
+            srv = reinterpret_cast<ID3D11ShaderResourceView*>(page->texture);
 
             // 4. 组装你的 Vertex[]、上传到GPU、绑定SRV并 DrawIndexed...
             // ...你的后续渲染代码...
-            Vertex vertices[4];
+            vertices.resize(4);
             for (int v = 0; v < 4; ++v) {
                 vertices[v].x = worldVertices[v * 2 + 0];
-                vertices[v].y = worldVertices[v * 2 + 1];
+                vertices[v].y = pState->logicalHeight - worldVertices[v * 2 + 1];
+                vertices[v].z = 0.0f;
                 vertices[v].u = uv_ptr[v * 2 + 0];
                 vertices[v].v = uv_ptr[v * 2 + 1];
                 vertices[v].r = 1.0f;
@@ -169,48 +178,60 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
                 vertices[v].b = 1.0f;
                 vertices[v].a = 1.0f;
             }
-            /*vertices[0].x = 844.0f;
-            vertices[0].y = 431.0f;
-            vertices[0].u = 0.0f;
-            vertices[0].v = 0.0f;
-            vertices[0].r = 1.0f;
-            vertices[0].g = 1.0f;
-            vertices[0].b = 1.0f;
-            vertices[0].a = 1.0f;
-            vertices[1].x = 1044.0f;
-            vertices[1].y = 431.0f;
-            vertices[1].u = 1.0f;
-            vertices[1].v = 0.0f;
-            vertices[1].r = 1.0f;
-            vertices[1].g = 1.0f;
-            vertices[1].b = 1.0f;
-            vertices[1].a = 1.0f;
-            vertices[2].x = 1044.0f;
-            vertices[2].y = 631.0f;
-            vertices[2].u = 1.0f;
-            vertices[2].v = 1.0f;
-            vertices[2].r = 1.0f;
-            vertices[2].g = 1.0f;
-            vertices[2].b = 1.0f;
-            vertices[2].a = 1.0f;
-            vertices[3].x = 844.0f;
-            vertices[3].y = 631.0f;
-            vertices[3].u = 0.0f;
-            vertices[3].v = 1.0f;
-            vertices[3].r = 1.0f;
-            vertices[3].g = 1.0f;
-            vertices[3].b = 1.0f;
-            vertices[3].a = 1.0f;*/
-       
 
-            // 5. 写入顶点buffer
+            indices = { 0, 1, 2, 2, 3, 0 };
+        }
+        else if (attachment->getRTTI().isExactly(spine::MeshAttachment::rtti)) {
+            auto* mesh = static_cast<spine::MeshAttachment*>(attachment);
+
+            // 1. 获取动态顶点数
+            int vertexCount = mesh->getWorldVerticesLength() / 2;
+            std::vector<float> worldVertices(vertexCount * 2);
+            mesh->computeWorldVertices(*slot, 0, mesh->getWorldVerticesLength(), worldVertices.data(), 0, 2);
+
+            // 2. UV
+            float* uv_ptr = mesh->getUVs().buffer();
+
+            //3
+            spine::Vector<unsigned short>& triangles = mesh->getTriangles();
+            indices.resize(triangles.size());
+            for (int i = 0; i < triangles.size(); ++i) indices[i] = triangles[i];
+
+            // 4. 获取SRV
+            spine::TextureRegion* texRegion = mesh->getRegion();
+            spine::AtlasRegion* atlasRegion = static_cast<spine::AtlasRegion*>(texRegion);
+            spine::AtlasPage* page = atlasRegion->page;
+            srv = reinterpret_cast<ID3D11ShaderResourceView*>(page->texture);
+
+            // 5. 组装 Vertex[]
+            vertices.resize(vertexCount);
+            for (int v = 0; v < vertexCount; ++v) {
+                vertices[v].x = worldVertices[v * 2 + 0];
+                vertices[v].y = pState->logicalHeight - worldVertices[v * 2 + 1];
+                vertices[v].z = 0.0f;
+                vertices[v].u = uv_ptr[v * 2 + 0];
+                vertices[v].v = uv_ptr[v * 2 + 1];
+                vertices[v].r = 1.0f;
+                vertices[v].g = 1.0f;
+                vertices[v].b = 1.0f;
+                vertices[v].a = 1.0f;
+            }
+        }
+        // 5. 写入顶点buffer
+        if (srv && !vertices.empty() && !indices.empty()) {
             D3D11_MAPPED_SUBRESOURCE mapped;
             HRESULT hr = context->Map(m_vertexBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mapped);
-            if (FAILED(hr)) {
-                return;
+            if (SUCCEEDED(hr)) {
+                memcpy(mapped.pData, vertices.data(), vertices.size() * sizeof(Vertex));
+                context->Unmap(m_vertexBuffer, 0);
             }
-            memcpy(mapped.pData, vertices, sizeof(vertices));
-            context->Unmap(m_vertexBuffer, 0);
+
+            hr = context->Map(m_indexBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mapped);
+            if (SUCCEEDED(hr)) {
+                memcpy(mapped.pData, indices.data(), indices.size() * sizeof(UINT));
+                context->Unmap(m_indexBuffer, 0);
+            }
+
 
             // 6. 绑定输入布局/缓冲区/常量缓冲区
             UINT stride = sizeof(Vertex);
@@ -221,7 +242,7 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
             // 7. 绑定纹理
             context->PSSetShaderResources(0, 1, &srv);
 
-            context->DrawIndexed(6, 0, 0);
+            context->DrawIndexed(static_cast<UINT>(indices.size()), 0, 0);
         }
         
     }

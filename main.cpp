@@ -195,7 +195,7 @@ LRESULT CALLBACK WindowProc(
     {
         //
         pState = GetAppState(hwnd);
-        if (pState) {
+        if (pState && pState->context) {
             // ビューポート更新
             UpdateViewport(pState->context, hwnd);
 

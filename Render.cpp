@@ -13,13 +13,7 @@
 
 
 void Render(HWND hwnd, StateInfo* pState) {
-    PAINTSTRUCT ps;
-    HDC hdc = BeginPaint(hwnd, &ps);
-
-    (void)hdc;
-
-
-
+ 
 
     // レンダーターゲットビューと深度/ステンシルビューをバインド
     pState->context->OMSetRenderTargets(1, &pState->rtv, pState->depthStencilView);
@@ -54,7 +48,7 @@ void Render(HWND hwnd, StateInfo* pState) {
     // 2番目のパラメータは定数配列。ブレンド記述でD3D11_BLEND_BLEND_FACTORやD3D11_BLEND_INV_BLEND_FACTORを使う場合に利用。
     // 通常、アルファブレンドの場合はnullptrか全て1の配列でOK。
     // 3番目はサンプルマスク。通常は0xffffffff。
-    pState->context->OMSetBlendState(pState->blendState, nullptr, 0xffffffff);
+    pState->context->OMSetBlendState(pState->blendStateNormal, nullptr, 0xffffffff);
 
     // 透過用の深度ステンシルステートを設定！これが重要！
     // 2番目（StencilRef）はここでは重要でないので0でOK。
@@ -74,5 +68,4 @@ void Render(HWND hwnd, StateInfo* pState) {
     //// バックバッファ（描画が終わったバッファ）とフロントバッファ（画面に表示されているバッファ）を交換
     pState->swapChain->Present(1, 0);
 
-    EndPaint(hwnd, &ps);
 }

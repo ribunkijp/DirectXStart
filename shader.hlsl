@@ -66,7 +66,7 @@ float4 PSMain(PS_INPUT input) : SV_TARGET
     float4 textureColor = shaderTexture.Sample(SamplerClamp, input.tex);
 
     // テクスチャの色だけを使う：
-   return textureColor;
+    return textureColor;
     
     //return float4(1, 0, 0, 1);
     
