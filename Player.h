@@ -47,6 +47,8 @@ private:
     spine::AnimationStateData* m_animationStateData;
     float texOffset[2];
     float texScale[2];
+    size_t m_vertexBufferSize;
+    size_t m_indexBufferSize;
     ID3D11Buffer* m_vertexBuffer;
     ID3D11Buffer* m_indexBuffer;
     ID3D11Buffer* constantBuffer;

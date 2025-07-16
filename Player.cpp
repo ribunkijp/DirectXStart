@@ -22,6 +22,8 @@ Player::Player()
     m_animationStateData(nullptr),
     texOffset{ 0.0f, 0.0f },
     texScale{ 1.0f, 1.0f },
+    m_vertexBufferSize(4),
+    m_indexBufferSize(6),
     m_vertexBuffer(nullptr),
     m_indexBuffer(nullptr),
     constantBuffer(nullptr),
@@ -77,8 +79,8 @@ void Player::Update(float deltaTime) {
 }
 bool Player::InitBuffers(ID3D11Device* device) {
     Vertex vertices[4] = {};
-    m_vertexBuffer = CreateQuadVertexBuffer(device, vertices, 4);
-    m_indexBuffer = CreateQuadIndexBuffer(device);
+    m_vertexBuffer = CreateDynamicVertexBuffer(device, m_vertexBufferSize);
+    m_indexBuffer = CreateDynamicIndexBuffer(device, m_indexBufferSize);
     return m_vertexBuffer && m_indexBuffer;
 }
 bool Player::InitConstantBuffer(ID3D11Device* device) {
@@ -183,7 +185,6 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
         }
         else if (attachment->getRTTI().isExactly(spine::MeshAttachment::rtti)) {
             auto* mesh = static_cast<spine::MeshAttachment*>(attachment);
-
             // 1. 获取动态顶点数
             int vertexCount = mesh->getWorldVerticesLength() / 2;
             std::vector<float> worldVertices(vertexCount * 2);
@@ -216,6 +217,16 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
                 vertices[v].b = 1.0f;
                 vertices[v].a = 1.0f;
             }
+        }
+        if (vertices.size() > m_vertexBufferSize) {
+            SAFE_RELEASE(m_vertexBuffer);
+            m_vertexBuffer = CreateDynamicVertexBuffer(pState->device, vertices.size());
+            m_vertexBufferSize = vertices.size();
+        }
+        if (indices.size() > m_indexBufferSize) {
+            SAFE_RELEASE(m_indexBuffer);
+            m_indexBuffer = CreateDynamicIndexBuffer(pState->device, indices.size());
+            m_indexBufferSize = indices.size();
         }
         // 5. 写入顶点buffer
         if (srv && !vertices.empty() && !indices.empty()) {
