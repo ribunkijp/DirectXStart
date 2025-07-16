@@ -33,11 +33,11 @@ Player::Player()
 }
 
 bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std::string& skelPath) {
-    m_loader = new SpineTextureLoader(device);
-    m_atlas = new spine::Atlas(atlasPath.c_str(), m_loader);
+    m_loader = new SpineTextureLoader(device);//加载图片纹理到GPU，供后续渲染
+    m_atlas = new spine::Atlas(atlasPath.c_str(), m_loader);//加载贴图信息和图片
     spine::SkeletonBinary binary(m_atlas);
-    m_skeletonData = binary.readSkeletonDataFile(skelPath.c_str());
-    m_skeleton = new spine::Skeleton(m_skeletonData);
+    m_skeletonData = binary.readSkeletonDataFile(skelPath.c_str());// 加载骨骼动画数据
+    m_skeleton = new spine::Skeleton(m_skeletonData);//创建运行时骨架对象
 
     if (!m_skeletonData) {
         OutputDebugStringA("skeletonData load failed!\n");
@@ -49,8 +49,8 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
 
     m_skeleton->setX(300.0f);
     m_skeleton->setY(400.0f); 
-   
-    spine::AnimationStateData* animationStateData = new spine::AnimationStateData(m_skeletonData);
+
+    spine::AnimationStateData* animationStateData = new spine::AnimationStateData(m_skeletonData);//AnimationStateData、AnimationState 是Spine的动画状态机，能自动管理当前播放的动画、混合、切换、进度等
     animationStateData->setDefaultMix(0.1f);
     animationStateData->setMix("jump", "walk", 0.2f);
     spine::AnimationState* animationState = new spine::AnimationState(animationStateData);
@@ -59,12 +59,12 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
     
     m_animationState->setAnimation(0, "hoverboard", true);
    
-    if (!InitBuffers(device)) {
+    if (!InitBuffers(device)) {//分配GPU内存，为每帧动画生成的顶点/索引数据准备空间
         return false;
     }
 
     // 
-    if (!InitConstantBuffer(device)) {
+    if (!InitConstantBuffer(device)) {//常量缓冲区用于传递模型变换/贴图偏移等信息给Shader
         return false;
     }
 
@@ -73,9 +73,9 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
 }
 
 void Player::Update(float deltaTime) {
-    m_animationState->update(deltaTime);
-    m_animationState->apply(*m_skeleton);
-    m_skeleton->updateWorldTransform(spine::Physics_None);
+    m_animationState->update(deltaTime);//推进动画时间
+    m_animationState->apply(*m_skeleton);//把动画结果应用到骨架
+    m_skeleton->updateWorldTransform(spine::Physics_None);//计算所有骨骼的最终世界变换
 }
 bool Player::InitBuffers(ID3D11Device* device) {
     Vertex vertices[4] = {};
@@ -97,9 +97,6 @@ bool Player::InitConstantBuffer(ID3D11Device* device) {
     return SUCCEEDED(hr);
 }
 void Player::UpdateConstantBuffer(ID3D11DeviceContext* context, const DirectX::XMMATRIX& view, const DirectX::XMMATRIX& projection) {
-
-    // GPUのconstantBufferをCPUがアクセスできるメモリにマッピングし、新しいデータを書き込む
-    // Direct3DのMap後に、書き込み可能なメモリアドレス（void*型）を得られる
     D3D11_MAPPED_SUBRESOURCE mappedResource;
 
     if (SUCCEEDED(context->Map(constantBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource))) {
@@ -119,13 +116,13 @@ void Player::UpdateConstantBuffer(ID3D11DeviceContext* context, const DirectX::X
 void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
     const DirectX::XMMATRIX& view,
     const DirectX::XMMATRIX& projection){
-    UpdateConstantBuffer(context, view, projection);
+    UpdateConstantBuffer(context, view, projection);//更新常量缓冲区（传递相机/模型/纹理偏移等）
     context->VSSetConstantBuffers(0, 1, &constantBuffer); 
 
-    auto& drawOrder = m_skeleton->getDrawOrder();
+    auto& drawOrder = m_skeleton->getDrawOrder();//DrawOrder是Spine确定的“前后遮挡顺序”
     for (size_t i = 0; i < drawOrder.size(); ++i) {
-        spine::Slot* slot = drawOrder[i];
-        spine::Attachment* attachment = slot->getAttachment();
+        spine::Slot* slot = drawOrder[i];//每个Slot就是一个挂载了图片或网格的骨骼点
+        spine::Attachment* attachment = slot->getAttachment();//图片/网格
         if (!attachment) continue;
 
         spine::BlendMode blendMode = slot->getData().getBlendMode();
@@ -152,15 +149,15 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
             // ---- 下面这些代码直接放这里！----
             auto* region = static_cast<spine::RegionAttachment*>(attachment);
 
-            // 1. 获取世界坐标
+            // 获取世界坐标
             float worldVertices[8];
-            region->computeWorldVertices(*slot, worldVertices, 0, 2);
+            region->computeWorldVertices(*slot, worldVertices, 0, 2);//调用 computeWorldVertices，得到当前帧图片四个顶点的世界坐标
 
-            // 2. 获取UV
+            // 获取UV
             spine::Vector<float>& uvs = region->getUVs();
             float* uv_ptr = uvs.buffer();
 
-            // 3. 获取SRV
+            // 获取SRV
             spine::TextureRegion* texRegion = region->getRegion();
             spine::AtlasRegion* atlasRegion = static_cast<spine::AtlasRegion*>(texRegion);
             spine::AtlasPage* page = atlasRegion->page;
@@ -185,26 +182,26 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
         }
         else if (attachment->getRTTI().isExactly(spine::MeshAttachment::rtti)) {
             auto* mesh = static_cast<spine::MeshAttachment*>(attachment);
-            // 1. 获取动态顶点数
+            // 获取动态顶点数
             int vertexCount = mesh->getWorldVerticesLength() / 2;
             std::vector<float> worldVertices(vertexCount * 2);
-            mesh->computeWorldVertices(*slot, 0, mesh->getWorldVerticesLength(), worldVertices.data(), 0, 2);
+            mesh->computeWorldVertices(*slot, 0, mesh->getWorldVerticesLength(), worldVertices.data(), 0, 2);//计算当前帧所有网格顶点的世界坐标
 
-            // 2. UV
+            // UV
             float* uv_ptr = mesh->getUVs().buffer();
 
-            //3
+            //
             spine::Vector<unsigned short>& triangles = mesh->getTriangles();
             indices.resize(triangles.size());
             for (int i = 0; i < triangles.size(); ++i) indices[i] = triangles[i];
 
-            // 4. 获取SRV
+            // 获取SRV
             spine::TextureRegion* texRegion = mesh->getRegion();
             spine::AtlasRegion* atlasRegion = static_cast<spine::AtlasRegion*>(texRegion);
             spine::AtlasPage* page = atlasRegion->page;
             srv = reinterpret_cast<ID3D11ShaderResourceView*>(page->texture);
 
-            // 5. 组装 Vertex[]
+            // 组装 Vertex[]
             vertices.resize(vertexCount);
             for (int v = 0; v < vertexCount; ++v) {
                 vertices[v].x = worldVertices[v * 2 + 0];
@@ -228,7 +225,7 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
             m_indexBuffer = CreateDynamicIndexBuffer(pState->device, indices.size());
             m_indexBufferSize = indices.size();
         }
-        // 5. 写入顶点buffer
+        // 写入顶点buffer
         if (srv && !vertices.empty() && !indices.empty()) {
             D3D11_MAPPED_SUBRESOURCE mapped;
             HRESULT hr = context->Map(m_vertexBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mapped);
@@ -236,23 +233,20 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
                 memcpy(mapped.pData, vertices.data(), vertices.size() * sizeof(Vertex));
                 context->Unmap(m_vertexBuffer, 0);
             }
-
+            // 上传GPU缓冲区
             hr = context->Map(m_indexBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mapped);
             if (SUCCEEDED(hr)) {
                 memcpy(mapped.pData, indices.data(), indices.size() * sizeof(UINT));
                 context->Unmap(m_indexBuffer, 0);
             }
-
-
-            // 6. 绑定输入布局/缓冲区/常量缓冲区
+            // 绑定输入布局/缓冲区/常量缓冲区
             UINT stride = sizeof(Vertex);
             UINT offset = 0;
             context->IASetVertexBuffers(0, 1, &m_vertexBuffer, &stride, &offset);
             context->IASetIndexBuffer(m_indexBuffer, DXGI_FORMAT_R32_UINT, 0);
-
-            // 7. 绑定纹理
-            context->PSSetShaderResources(0, 1, &srv);
-
+            // 绑定纹理
+            context->PSSetShaderResources(0, 1, &srv);//把纹理SRV（Shader Resource View）绑定到像素着色器（Pixel Shader），
+            //
             context->DrawIndexed(static_cast<UINT>(indices.size()), 0, 0);
         }
         
