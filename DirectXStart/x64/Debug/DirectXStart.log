@@ -1,5 +1,1 @@
-﻿  BufferUtils.cpp
-C:\code\DirectXStart\StateInfo.h(41,13): warning C4820: 'StateInfo': '8' バイトのパディングを データ メンバー 'StateInfo::player' の後に追加しました。
-  (ソース ファイル 'BufferUtils.cpp' をコンパイルしています)
-  
-  DirectXStart.vcxproj -> C:\code\DirectXStart\x64\Debug\DirectXStart.exe
+﻿

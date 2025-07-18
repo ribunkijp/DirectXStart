@@ -12,6 +12,7 @@
 #include <spine/spine.h>
 #include <spine/RegionAttachment.h>
 #include "BufferUtils.h"
+#include <spine/SkeletonBounds.h>
 
 Player::Player()
     : m_loader(nullptr),
@@ -47,8 +48,10 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
         OutputDebugStringA("skeleton is null!\n");
     }
 
-    m_skeleton->setX(300.0f);
-    m_skeleton->setY(400.0f); 
+    m_skeleton->setX(0.0f);
+    m_skeleton->setY(0.0f); 
+
+    modelMatrix = DirectX::XMMatrixScaling(0.5f, 0.5f, 1.0f) * DirectX::XMMatrixTranslation(0.0f, 0.0f, 0.0f);
 
     spine::AnimationStateData* animationStateData = new spine::AnimationStateData(m_skeletonData);//AnimationStateData、AnimationState 是Spine的动画状态机，能自动管理当前播放的动画、混合、切换、进度等
     animationStateData->setDefaultMix(0.1f);
@@ -57,7 +60,7 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
     m_animationStateData = animationStateData;
     m_animationState = animationState;
     
-    m_animationState->setAnimation(0, "hoverboard", true);
+    m_animationState->setAnimation(0, "walk", true);
    
     if (!InitBuffers(device)) {//分配GPU内存，为每帧动画生成的顶点/索引数据准备空间
         return false;
@@ -71,11 +74,16 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
 
     return true;
 }
-
+Bounds Player::GetCurrentBounds () {
+    spine::SkeletonBounds bounds;
+    bounds.update(*m_skeleton, true);
+    return Bounds{ bounds.getMinX(), bounds.getMinY(),  bounds.getMaxX(), bounds.getMaxY() };
+}
 void Player::Update(float deltaTime) {
     m_animationState->update(deltaTime);//推进动画时间
     m_animationState->apply(*m_skeleton);//把动画结果应用到骨架
     m_skeleton->updateWorldTransform(spine::Physics_None);//计算所有骨骼的最终世界变换
+
 }
 bool Player::InitBuffers(ID3D11Device* device) {
     Vertex vertices[4] = {};
@@ -205,7 +213,7 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
             vertices.resize(vertexCount);
             for (int v = 0; v < vertexCount; ++v) {
                 vertices[v].x = worldVertices[v * 2 + 0];
-                vertices[v].y = pState->logicalHeight - worldVertices[v * 2 + 1];
+                vertices[v].y = pState->logicalHeight -  worldVertices[v * 2 + 1];
                 vertices[v].z = 0.0f;
                 vertices[v].u = uv_ptr[v * 2 + 0];
                 vertices[v].v = uv_ptr[v * 2 + 1];

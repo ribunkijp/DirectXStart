@@ -21,7 +21,11 @@
 
 struct StateInfo;
 
-
+struct Bounds {
+    float minX, minY, maxX, maxY;
+    float width() const { return maxX - minX; }
+    float height() const { return maxY - minY; }
+};
 
 
 
@@ -37,6 +41,7 @@ public:
     bool InitBuffers(ID3D11Device* device);
     bool InitConstantBuffer(ID3D11Device* device);
     void UpdateConstantBuffer(ID3D11DeviceContext* context, const DirectX::XMMATRIX& view, const DirectX::XMMATRIX& projection);
+    Bounds GetCurrentBounds ();
 
 private:
     SpineTextureLoader* m_loader;
