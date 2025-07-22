@@ -1,1 +1,513 @@
-﻿
+﻿  Player.cpp
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(241,16): warning C4820: 'spine::String': '7' バイトのパディングを データ メンバー 'spine::String::_tempowner' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(201,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(202,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(212,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SpineString.h(213,50): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(123,7): warning C4820: 'spine::PowInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowInterpolation::power' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MathUtil.h(134,7): warning C4820: 'spine::PowOutInterpolation': '4' バイトのパディングを データ メンバー 'spine::PowOutInterpolation::power' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skeleton.h(265,15): warning C4820: 'spine::Skeleton': '4' バイトのパディングを データ メンバー 'spine::Skeleton::_time' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TextureRegion.h(43,22): warning C4820: 'spine::TextureRegion': '4' バイトのパディングを データ メンバー 'spine::TextureRegion::originalHeight' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(86,8): warning C4820: 'spine::AtlasPage': '3' バイトのパディングを データ メンバー 'spine::AtlasPage::pma' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(87,13): warning C4820: 'spine::AtlasPage': '4' バイトのパディングを データ メンバー 'spine::AtlasPage::index' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Atlas.h(102,10): warning C4820: 'spine::AtlasRegion': '4' バイトのパディングを データ メンバー 'spine::AtlasRegion::y' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(129,8): warning C4820: 'spine::Slot': '7' バイトのパディングを データ メンバー 'spine::Slot::_hasDarkColor' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C4626: 'spine::Slot': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Slot.h(46,15): warning C5027: 'spine::Slot': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(320,13): warning C4820: 'spine::EventQueueEntry': '4' バイトのパディングを データ メンバー 'spine::EventQueueEntry::_type' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(333,8): warning C4820: 'spine::EventQueue': '7' バイトのパディングを データ メンバー 'spine::EventQueue::_drainDisabled' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(327,15): warning C4626: 'spine::EventQueue': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(474,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_animationsChanged' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(483,8): warning C4820: 'spine::AnimationState': '7' バイトのパディングを データ メンバー 'spine::AnimationState::_manualTrackEntryDisposal' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Player.h(59,19): warning C4820: 'Player': '8' バイトのパディングを データ メンバー 'Player::constantBuffer' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SkeletonBinary.h(131,14): warning C4820: 'spine::SkeletonBinary': '3' バイトのパディングを データ メンバー 'spine::SkeletonBinary::_ownsLoader' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SkeletonBinary.h(66,15): warning C4626: 'spine::SkeletonBinary': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Animation.h(126,9): warning C4820: 'spine::Animation': '4' バイトのパディングを データ メンバー 'spine::Animation::_duration' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationStateData.h(85,9): warning C4820: 'spine::AnimationStateData': '4' バイトのパディングを データ メンバー 'spine::AnimationStateData::_defaultMix' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Attachment.h(58,7): warning C4820: 'spine::Attachment': '4' バイトのパディングを データ メンバー 'spine::Attachment::_refCount' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Attachment.h(38,15): warning C4626: 'spine::Attachment': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AttachmentTimeline.h(74,7): warning C4820: 'spine::AttachmentTimeline': '4' バイトのパディングを データ メンバー 'spine::AttachmentTimeline::_slotIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Bone.h(281,8): warning C4820: 'spine::Bone': '2' バイトのパディングを データ メンバー 'spine::Bone::_active' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Bone.h(48,15): warning C4626: 'spine::Bone': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Bone.h(48,15): warning C5027: 'spine::Bone': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BoneData.h(137,13): warning C4820: 'spine::BoneData': '4' バイトのパディングを データ メンバー 'spine::BoneData::_index' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BoneData.h(143,8): warning C4820: 'spine::BoneData': '3' バイトのパディングを データ メンバー 'spine::BoneData::_skinRequired' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BoneData.h(146,14): warning C4820: 'spine::BoneData': '7' バイトのパディングを データ メンバー 'spine::BoneData::_visible' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BoneData.h(39,15): warning C4626: 'spine::BoneData': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BoneData.h(39,15): warning C5027: 'spine::BoneData': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\VertexAttachment.h(95,13): warning C4820: 'spine::VertexAttachment': '4' バイトのパディングを データ メンバー 'spine::VertexAttachment::_id' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\VertexAttachment.h(41,15): warning C4626: 'spine::VertexAttachment': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BoundingBoxAttachment.h(39,15): warning C4626: 'spine::BoundingBoxAttachment': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BoundingBoxAttachment.h(39,15): warning C5027: 'spine::BoundingBoxAttachment': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ClippingAttachment.h(39,15): warning C4626: 'spine::ClippingAttachment': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ClippingAttachment.h(39,15): warning C5027: 'spine::ClippingAttachment': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ColorTimeline.h(60,7): warning C4820: 'spine::RGBATimeline': '4' バイトのパディングを データ メンバー 'spine::RGBATimeline::_slotIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ColorTimeline.h(93,7): warning C4820: 'spine::RGBTimeline': '4' バイトのパディングを データ メンバー 'spine::RGBTimeline::_slotIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ColorTimeline.h(122,7): warning C4820: 'spine::AlphaTimeline': '4' バイトのパディングを データ メンバー 'spine::AlphaTimeline::_slotIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ColorTimeline.h(149,7): warning C4820: 'spine::RGBA2Timeline': '4' バイトのパディングを データ メンバー 'spine::RGBA2Timeline::_slotIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ColorTimeline.h(185,7): warning C4820: 'spine::RGB2Timeline': '4' バイトのパディングを データ メンバー 'spine::RGB2Timeline::_slotIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ConstraintData.h(65,8): warning C4820: 'spine::ConstraintData': '7' バイトのパディングを データ メンバー 'spine::ConstraintData::_skinRequired' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ConstraintData.h(38,15): warning C4626: 'spine::ConstraintData': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\DeformTimeline.h(72,7): warning C4820: 'spine::DeformTimeline': '4' バイトのパディングを データ メンバー 'spine::DeformTimeline::_slotIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Event.h(79,9): warning C4820: 'spine::Event': '4' バイトのパディングを データ メンバー 'spine::Event::_floatValue' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Event.h(40,15): warning C4626: 'spine::Event': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Event.h(40,15): warning C5027: 'spine::Event': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\EventData.h(38,15): warning C4626: 'spine::EventData': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\EventData.h(38,15): warning C5027: 'spine::EventData': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\IkConstraint.h(110,8): warning C4820: 'spine::IkConstraint': '2' バイトのパディングを データ メンバー 'spine::IkConstraint::_stretch' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\IkConstraint.h(114,8): warning C4820: 'spine::IkConstraint': '7' バイトのパディングを データ メンバー 'spine::IkConstraint::_active' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\IkConstraint.h(44,15): warning C4626: 'spine::IkConstraint': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\IkConstraint.h(44,15): warning C5027: 'spine::IkConstraint': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\IkConstraintData.h(96,8): warning C4820: 'spine::IkConstraintData': '1' バイトのパディングを データ メンバー 'spine::IkConstraintData::_uniform' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\IkConstraintData.h(41,15): warning C4626: 'spine::IkConstraintData': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\IkConstraintData.h(41,15): warning C5027: 'spine::IkConstraintData': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\IkConstraintTimeline.h(59,7): warning C4820: 'spine::IkConstraintTimeline': '4' バイトのパディングを データ メンバー 'spine::IkConstraintTimeline::_constraintIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\InheritTimeline.h(64,7): warning C4820: 'spine::InheritTimeline': '4' バイトのパディングを データ メンバー 'spine::InheritTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\LinkedMesh.h(53,7): warning C4820: 'spine::LinkedMesh': '4' バイトのパディングを データ メンバー 'spine::LinkedMesh::_skinIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\LinkedMesh.h(57,8): warning C4820: 'spine::LinkedMesh': '7' バイトのパディングを データ メンバー 'spine::LinkedMesh::_inheritTimeline' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Sequence.h(78,7): warning C4820: 'spine::Sequence': '4' バイトのパディングを データ メンバー 'spine::Sequence::_id' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Sequence.h(82,7): warning C4820: 'spine::Sequence': '4' バイトのパディングを データ メンバー 'spine::Sequence::_setupIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MeshAttachment.h(116,15): warning C4820: 'spine::MeshAttachment': '4' バイトのパディングを データ メンバー 'spine::MeshAttachment::_height' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\MeshAttachment.h(42,15): warning C4626: 'spine::MeshAttachment': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathAttachment.h(65,8): warning C4820: 'spine::PathAttachment': '6' バイトのパディングを データ メンバー 'spine::PathAttachment::_constantSpeed' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathAttachment.h(37,15): warning C4626: 'spine::PathAttachment': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathAttachment.h(37,15): warning C5027: 'spine::PathAttachment': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraint.h(110,28): warning C4820: 'spine::PathConstraint': '4' バイトのパディングを データ メンバー 'spine::PathConstraint::_mixY' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraint.h(119,8): warning C4820: 'spine::PathConstraint': '7' バイトのパディングを データ メンバー 'spine::PathConstraint::_active' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraint.h(48,15): warning C4626: 'spine::PathConstraint': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraint.h(48,15): warning C5027: 'spine::PathConstraint': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraintData.h(115,28): warning C4820: 'spine::PathConstraintData': '4' バイトのパディングを データ メンバー 'spine::PathConstraintData::_mixY' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraintData.h(46,15): warning C4626: 'spine::PathConstraintData': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraintData.h(46,15): warning C5027: 'spine::PathConstraintData': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraintMixTimeline.h(59,7): warning C4820: 'spine::PathConstraintMixTimeline': '4' バイトのパディングを データ メンバー 'spine::PathConstraintMixTimeline::_constraintIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraintPositionTimeline.h(60,7): warning C4820: 'spine::PathConstraintPositionTimeline': '4' バイトのパディングを データ メンバー 'spine::PathConstraintPositionTimeline::_constraintIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PathConstraintSpacingTimeline.h(55,7): warning C4820: 'spine::PathConstraintSpacingTimeline': '4' バイトのパディングを データ メンバー 'spine::PathConstraintSpacingTimeline::_pathConstraintIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PhysicsConstraint.h(173,14): warning C4820: 'spine::PhysicsConstraint': '3' バイトのパディングを データ メンバー 'spine::PhysicsConstraint::_reset' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PhysicsConstraint.h(189,14): warning C4820: 'spine::PhysicsConstraint': '7' バイトのパディングを データ メンバー 'spine::PhysicsConstraint::_active' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PhysicsConstraint.h(44,18): warning C4626: 'spine::PhysicsConstraint': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PhysicsConstraint.h(44,18): warning C5027: 'spine::PhysicsConstraint': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PhysicsConstraintData.h(147,105): warning C4820: 'spine::PhysicsConstraintData': '1' バイトのパディングを データ メンバー 'spine::PhysicsConstraintData::_mixGlobal' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PhysicsConstraintData.h(41,15): warning C4626: 'spine::PhysicsConstraintData': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PhysicsConstraintData.h(41,15): warning C5027: 'spine::PhysicsConstraintData': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PointAttachment.h(76,17): warning C4820: 'spine::PointAttachment': '4' バイトのパディングを データ メンバー 'spine::PointAttachment::_rotation' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PointAttachment.h(45,15): warning C4626: 'spine::PointAttachment': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\PointAttachment.h(45,15): warning C5027: 'spine::PointAttachment': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\RegionAttachment.h(130,54): warning C4820: 'spine::RegionAttachment': '4' バイトのパディングを データ メンバー 'spine::RegionAttachment::_height' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\RegionAttachment.h(47,15): warning C4626: 'spine::RegionAttachment': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\RotateTimeline.h(57,7): warning C4820: 'spine::RotateTimeline': '4' バイトのパディングを データ メンバー 'spine::RotateTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TranslateTimeline.h(61,7): warning C4820: 'spine::TranslateTimeline': '4' バイトのパディングを データ メンバー 'spine::TranslateTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TranslateTimeline.h(85,7): warning C4820: 'spine::TranslateXTimeline': '4' バイトのパディングを データ メンバー 'spine::TranslateXTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TranslateTimeline.h(109,7): warning C4820: 'spine::TranslateYTimeline': '4' バイトのパディングを データ メンバー 'spine::TranslateYTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ScaleTimeline.h(57,7): warning C4820: 'spine::ScaleTimeline': '4' バイトのパディングを データ メンバー 'spine::ScaleTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ScaleTimeline.h(81,7): warning C4820: 'spine::ScaleXTimeline': '4' バイトのパディングを データ メンバー 'spine::ScaleXTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ScaleTimeline.h(105,7): warning C4820: 'spine::ScaleYTimeline': '4' バイトのパディングを データ メンバー 'spine::ScaleYTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ShearTimeline.h(57,7): warning C4820: 'spine::ShearTimeline': '4' バイトのパディングを データ メンバー 'spine::ShearTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ShearTimeline.h(81,7): warning C4820: 'spine::ShearXTimeline': '4' バイトのパディングを データ メンバー 'spine::ShearXTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ShearTimeline.h(105,7): warning C4820: 'spine::ShearYTimeline': '4' バイトのパディングを データ メンバー 'spine::ShearYTimeline::_boneIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SkeletonBounds.h(118,7): warning C4820: 'spine::Polygon': '4' バイトのパディングを データ メンバー 'spine::Polygon::_count' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SkeletonData.h(183,15): warning C4820: 'spine::SkeletonData': '4' バイトのパディングを データ メンバー 'spine::SkeletonData::_referenceScale' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SkeletonData.h(189,9): warning C4820: 'spine::SkeletonData': '4' バイトのパディングを データ メンバー 'spine::SkeletonData::_fps' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SkeletonJson.h(84,14): warning C4820: 'spine::SkeletonJson': '3' バイトのパディングを データ メンバー 'spine::SkeletonJson::_ownsLoader' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SkeletonJson.h(64,15): warning C4626: 'spine::SkeletonJson': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BlockAllocator.h(61,13): warning C4820: 'spine::BlockAllocator': '4' バイトのパディングを データ メンバー 'spine::BlockAllocator::initialBlockSize' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BlockAllocator.h(71,45): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BlockAllocator.h(87,37): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BlockAllocator.h(88,45): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BlockAllocator.h(108,64): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SkeletonRenderer.h(45,17): warning C4820: 'spine::RenderCommand': '4' バイトのパディングを データ メンバー 'spine::RenderCommand::numVertices' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skin.h(69,17): warning C4626: 'spine::Skin::AttachmentMap::Entries': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skin.h(69,17): warning C5027: 'spine::Skin::AttachmentMap::Entries': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Skin.h(49,15): warning C4626: 'spine::Skin': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SlotData.h(113,13): warning C4820: 'spine::SlotData': '4' バイトのパディングを データ メンバー 'spine::SlotData::_index' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SlotData.h(119,8): warning C4820: 'spine::SlotData': '7' バイトのパディングを データ メンバー 'spine::SlotData::_hasDarkColor' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SlotData.h(122,14): warning C4820: 'spine::SlotData': '3' バイトのパディングを データ メンバー 'spine::SlotData::_visible' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SlotData.h(41,15): warning C4626: 'spine::SlotData': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\SlotData.h(41,15): warning C5027: 'spine::SlotData': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TransformConstraint.h(101,8): warning C4820: 'spine::TransformConstraint': '7' バイトのパディングを データ メンバー 'spine::TransformConstraint::_active' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TransformConstraint.h(44,15): warning C4626: 'spine::TransformConstraint': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TransformConstraint.h(44,15): warning C5027: 'spine::TransformConstraint': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TransformConstraintData.h(124,19): warning C4820: 'spine::TransformConstraintData': '6' バイトのパディングを データ メンバー 'spine::TransformConstraintData::_local' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TransformConstraintData.h(41,15): warning C4626: 'spine::TransformConstraintData': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TransformConstraintData.h(41,15): warning C5027: 'spine::TransformConstraintData': 移動代入演算子が暗黙的に削除済みとして定義されました
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\TransformConstraintTimeline.h(59,7): warning C4820: 'spine::TransformConstraintTimeline': '4' バイトのパディングを データ メンバー 'spine::TransformConstraintTimeline::_constraintIndex' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\StateInfo.h(16,8): warning C4099: 'Player': タイプ名は最初 'class' として使われていましたが 'struct' として使われています。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+      C:\code\DirectXStart\Player.h(32,7):
+      'Player' の宣言を確認してください
+  
+C:\code\DirectXStart\StateInfo.h(41,13): warning C4820: 'StateInfo': '8' バイトのパディングを データ メンバー 'StateInfo::player' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Player.cpp(178,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(179,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(180,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(181,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(182,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(183,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(184,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(185,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(186,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(194,29): warning C4267: '初期化中': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+C:\code\DirectXStart\Player.cpp(194,29): warning C4365: '初期化中': 'size_t' から 'int' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(195,58): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(204,22): warning C4456: 'i' を宣言すると、以前のローカル宣言が隠蔽されます
+      C:\code\DirectXStart\Player.cpp(131,17):
+      'i' の宣言を確認してください
+  
+C:\code\DirectXStart\Player.cpp(204,31): warning C4388: '<': signed と unsigned の数値を比較しようとしました。
+C:\code\DirectXStart\Player.cpp(204,64): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(204,79): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(213,29): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(215,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(215,53): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(216,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(216,78): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(217,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(218,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(219,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(220,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(221,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(222,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(223,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(115,24): warning C5219: 'size_t' から 'float' への暗黙的な変換です。データが失われる可能性があります
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(115,24):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BlockAllocator.h(62,24):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::Vector<spine::Block>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(108,15):
+          クラス テンプレート メンバー関数 'void spine::Vector<spine::Block>::add(const T &)' のコンパイル中
+          with
+          [
+              T=spine::Block
+          ]
+              C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\BlockAllocator.h(66,23):
+              'spine::BlockAllocator::BlockAllocator' の 'spine::Vector<spine::Block>::add' への最初の参照を参照してください
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(115,23): warning C4365: '=': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(111,21):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Triangulator.h(60,22):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::Pool<spine::Vector<int>>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(45,4):
+          クラス テンプレート メンバー関数 'spine::Pool<spine::Vector<int>>::~Pool(void)' のコンパイル中
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Pool.h(46,19):
+          コンパイル対象の関数 テンプレート インスタンス化 'void spine::ContainerUtil::cleanUpVectorOfPointers<spine::Vector<int>>(spine::Vector<spine::Vector<int> *> &)' のリファレンスを確認してください
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\ContainerUtil.h(115,20): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warning C4820: 'spine::HashMap<spine::AnimationStateData::AnimationPair,float>::Entry': '4' バイトのパディングを データ メンバー 'spine::HashMap<spine::AnimationStateData::AnimationPair,float>::Entry::_value' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationStateData.h(86,33):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::HashMap<spine::AnimationStateData::AnimationPair,float>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(97,8):
+          クラス テンプレート メンバー関数 'void spine::HashMap<spine::AnimationStateData::AnimationPair,float>::clear(void)' のコンパイル中
+              C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(94,9):
+              'spine::HashMap<spine::AnimationStateData::AnimationPair,float>::~HashMap' の 'spine::HashMap<spine::AnimationStateData::AnimationPair,float>::clear' への最初の参照を参照してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
+          クラス 'spine::HashMap<spine::AnimationStateData::AnimationPair,float>::Entry' のコンパイル中
+  
+C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6): warning C4820: 'spine::HashMap<spine::PropertyId,bool>::Entry': '7' バイトのパディングを データ メンバー 'spine::HashMap<spine::PropertyId,bool>::Entry::_value' の後に追加しました。
+  (ソース ファイル 'Player.cpp' をコンパイルしています)
+      C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(188,6):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\AnimationState.h(473,29):
+          コンパイル対象の クラス テンプレート インスタンス化 'spine::HashMap<spine::PropertyId,bool>' のリファレンスを確認してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(97,8):
+          クラス テンプレート メンバー関数 'void spine::HashMap<spine::PropertyId,bool>::clear(void)' のコンパイル中
+              C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(94,9):
+              'spine::HashMap<spine::PropertyId,bool>::~HashMap' の 'spine::HashMap<spine::PropertyId,bool>::clear' への最初の参照を参照してください
+          C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\HashMap.h(48,9):
+          クラス 'spine::HashMap<spine::PropertyId,bool>::Entry' のコンパイル中
+  
+C:\code\DirectXStart\Player.cpp(120,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(120,1): warning C5045: C:\code\DirectXStart\Player.cpp(110) : 注: この行で比較を行ってインデックス '' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(120,1): warning C5045: C:\code\DirectXStart\Player.cpp(120) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(132,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(132,1): warning C5045: C:\code\DirectXStart\Player.cpp(131) : 注: この行で比較を行ってインデックス 'i' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(132,1): warning C5045: C:\code\DirectXStart\Player.cpp(219) : 注: この行にメモリの読み込みを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(204,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(204,1): warning C5045: C:\code\DirectXStart\Player.cpp(204) : 注: この行で比較を行ってインデックス '' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(204,1): warning C5045: C:\code\DirectXStart\Player.cpp(204) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(186,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(186,1): warning C5045: C:\code\DirectXStart\Player.cpp(177) : 注: この行で比較を行ってインデックス 'v' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(186,1): warning C5045: C:\code\DirectXStart\Player.cpp(186) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(248,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(248,1): warning C5045: C:\code\DirectXStart\Player.cpp(246) : 注: この行で比較を行ってインデックス 'hr' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(248,1): warning C5045: C:\code\DirectXStart\Player.cpp(248) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(242,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(242,1): warning C5045: C:\code\DirectXStart\Player.cpp(240) : 注: この行で比較を行ってインデックス 'hr' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(242,1): warning C5045: C:\code\DirectXStart\Player.cpp(242) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+LINK : fatal error LNK1104: ファイル 'DirectXTex.lib' を開くことができません。
