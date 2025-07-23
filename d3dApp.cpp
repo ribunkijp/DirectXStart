@@ -310,7 +310,7 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
 
     pState->player = new Player();
 
-    bool createPlayer = pState->player->Load(pState->device, "assets/spineboy-pro.atlas", "assets/spineboy-pro.skel");
+    bool createPlayer = pState->player->Load(pState->device, "assets/player.atlas", "assets/player.skel");
     if (!createPlayer) {
         MessageBox(hwnd, L"Failed to create player", L"Error", MB_OK);
         return false;

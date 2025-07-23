@@ -48,19 +48,19 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
         OutputDebugStringA("skeleton is null!\n");
     }
 
-    m_skeleton->setX(0.0f);
+    m_skeleton->setX(300.0f);
     m_skeleton->setY(0.0f); 
 
     modelMatrix = DirectX::XMMatrixScaling(0.5f, 0.5f, 1.0f) * DirectX::XMMatrixTranslation(0.0f, 0.0f, 0.0f);
 
     spine::AnimationStateData* animationStateData = new spine::AnimationStateData(m_skeletonData);//AnimationStateData、AnimationState 是Spine的动画状态机，能自动管理当前播放的动画、混合、切换、进度等
     animationStateData->setDefaultMix(0.1f);
-    animationStateData->setMix("jump", "walk", 0.2f);
+    //animationStateData->setMix("jump", "walk", 0.2f);
     spine::AnimationState* animationState = new spine::AnimationState(animationStateData);
     m_animationStateData = animationStateData;
     m_animationState = animationState;
     
-    m_animationState->setAnimation(0, "walk", true);
+    m_animationState->setAnimation(0, "walking", true);
    
     if (!InitBuffers(device)) {//分配GPU内存，为每帧动画生成的顶点/索引数据准备空间
         return false;

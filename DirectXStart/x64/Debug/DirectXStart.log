@@ -510,4 +510,4 @@ C:\code\DirectXStart\Player.cpp(248,1): warning C5045: C:\code\DirectXStart\Play
 C:\code\DirectXStart\Player.cpp(242,1): warning C5045: /Qspectre スイッチが 
 C:\code\DirectXStart\Player.cpp(242,1): warning C5045: C:\code\DirectXStart\Player.cpp(240) : 注: この行で比較を行ってインデックス 'hr' の範囲を確認します
 C:\code\DirectXStart\Player.cpp(242,1): warning C5045: C:\code\DirectXStart\Player.cpp(242) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-LINK : fatal error LNK1104: ファイル 'DirectXTex.lib' を開くことができません。
+  DirectXStart.vcxproj -> C:\code\DirectXStart\x64\Debug\DirectXStart.exe
