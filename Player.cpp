@@ -154,7 +154,6 @@ void Player::Render(ID3D11DeviceContext* context, StateInfo* pState,
         std::vector<UINT> indices;
         ID3D11ShaderResourceView* srv = nullptr;
         if (attachment->getRTTI().isExactly(spine::RegionAttachment::rtti)) {
-            // ---- 下面这些代码直接放这里！----
             auto* region = static_cast<spine::RegionAttachment*>(attachment);
 
             // 获取世界坐标

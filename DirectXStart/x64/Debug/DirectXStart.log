@@ -403,6 +403,7 @@ C:\code\DirectXStart\StateInfo.h(16,8): warning C4099: 'Player': タイプ名は
 C:\code\DirectXStart\StateInfo.h(41,13): warning C4820: 'StateInfo': '8' バイトのパディングを データ メンバー 'StateInfo::player' の後に追加しました。
   (ソース ファイル 'Player.cpp' をコンパイルしています)
   
+C:\code\DirectXStart\Player.cpp(177,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(178,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(179,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(180,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
@@ -411,29 +412,28 @@ C:\code\DirectXStart\Player.cpp(182,26): warning C4365: '引数': 'int' から '
 C:\code\DirectXStart\Player.cpp(183,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(184,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(185,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
-C:\code\DirectXStart\Player.cpp(186,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
-C:\code\DirectXStart\Player.cpp(194,29): warning C4267: '初期化中': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
-C:\code\DirectXStart\Player.cpp(194,29): warning C4365: '初期化中': 'size_t' から 'int' に変換しました。signed/unsigned が一致しません。
-C:\code\DirectXStart\Player.cpp(195,58): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
-C:\code\DirectXStart\Player.cpp(204,22): warning C4456: 'i' を宣言すると、以前のローカル宣言が隠蔽されます
+C:\code\DirectXStart\Player.cpp(193,29): warning C4267: '初期化中': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+C:\code\DirectXStart\Player.cpp(193,29): warning C4365: '初期化中': 'size_t' から 'int' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(194,58): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(203,22): warning C4456: 'i' を宣言すると、以前のローカル宣言が隠蔽されます
       C:\code\DirectXStart\Player.cpp(131,17):
       'i' の宣言を確認してください
   
-C:\code\DirectXStart\Player.cpp(204,31): warning C4388: '<': signed と unsigned の数値を比較しようとしました。
-C:\code\DirectXStart\Player.cpp(204,64): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
-C:\code\DirectXStart\Player.cpp(204,79): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
-C:\code\DirectXStart\Player.cpp(213,29): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(203,31): warning C4388: '<': signed と unsigned の数値を比較しようとしました。
+C:\code\DirectXStart\Player.cpp(203,64): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(203,79): warning C4365: '引数': 'int' から 'size_t' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(212,29): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(214,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(214,53): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(215,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
-C:\code\DirectXStart\Player.cpp(215,53): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
+C:\code\DirectXStart\Player.cpp(215,78): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(216,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
-C:\code\DirectXStart\Player.cpp(216,78): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(217,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(218,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(219,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(220,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(221,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\DirectXStart\Player.cpp(222,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
-C:\code\DirectXStart\Player.cpp(223,26): warning C4365: '引数': 'int' から 'const unsigned __int64' に変換しました。signed/unsigned が一致しません。
 C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(115,24): warning C5219: 'size_t' から 'float' への暗黙的な変換です。データが失われる可能性があります
   (ソース ファイル 'Player.cpp' をコンパイルしています)
       C:\code\spine-runtimes\spine-cpp\spine-cpp\include\spine\Vector.h(115,24):
@@ -497,17 +497,17 @@ C:\code\DirectXStart\Player.cpp(120,1): warning C5045: C:\code\DirectXStart\Play
 C:\code\DirectXStart\Player.cpp(120,1): warning C5045: C:\code\DirectXStart\Player.cpp(120) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
 C:\code\DirectXStart\Player.cpp(132,1): warning C5045: /Qspectre スイッチが 
 C:\code\DirectXStart\Player.cpp(132,1): warning C5045: C:\code\DirectXStart\Player.cpp(131) : 注: この行で比較を行ってインデックス 'i' の範囲を確認します
-C:\code\DirectXStart\Player.cpp(132,1): warning C5045: C:\code\DirectXStart\Player.cpp(219) : 注: この行にメモリの読み込みを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-C:\code\DirectXStart\Player.cpp(204,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\Player.cpp(204,1): warning C5045: C:\code\DirectXStart\Player.cpp(204) : 注: この行で比較を行ってインデックス '' の範囲を確認します
-C:\code\DirectXStart\Player.cpp(204,1): warning C5045: C:\code\DirectXStart\Player.cpp(204) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-C:\code\DirectXStart\Player.cpp(186,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\Player.cpp(186,1): warning C5045: C:\code\DirectXStart\Player.cpp(177) : 注: この行で比較を行ってインデックス 'v' の範囲を確認します
-C:\code\DirectXStart\Player.cpp(186,1): warning C5045: C:\code\DirectXStart\Player.cpp(186) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-C:\code\DirectXStart\Player.cpp(248,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\Player.cpp(248,1): warning C5045: C:\code\DirectXStart\Player.cpp(246) : 注: この行で比較を行ってインデックス 'hr' の範囲を確認します
-C:\code\DirectXStart\Player.cpp(248,1): warning C5045: C:\code\DirectXStart\Player.cpp(248) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-C:\code\DirectXStart\Player.cpp(242,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\Player.cpp(242,1): warning C5045: C:\code\DirectXStart\Player.cpp(240) : 注: この行で比較を行ってインデックス 'hr' の範囲を確認します
-C:\code\DirectXStart\Player.cpp(242,1): warning C5045: C:\code\DirectXStart\Player.cpp(242) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(132,1): warning C5045: C:\code\DirectXStart\Player.cpp(218) : 注: この行にメモリの読み込みを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(203,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(203,1): warning C5045: C:\code\DirectXStart\Player.cpp(203) : 注: この行で比較を行ってインデックス '' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(203,1): warning C5045: C:\code\DirectXStart\Player.cpp(203) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(185,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(185,1): warning C5045: C:\code\DirectXStart\Player.cpp(176) : 注: この行で比較を行ってインデックス 'v' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(185,1): warning C5045: C:\code\DirectXStart\Player.cpp(185) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(247,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(247,1): warning C5045: C:\code\DirectXStart\Player.cpp(245) : 注: この行で比較を行ってインデックス 'hr' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(247,1): warning C5045: C:\code\DirectXStart\Player.cpp(247) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\Player.cpp(241,1): warning C5045: /Qspectre スイッチが 
+C:\code\DirectXStart\Player.cpp(241,1): warning C5045: C:\code\DirectXStart\Player.cpp(239) : 注: この行で比較を行ってインデックス 'hr' の範囲を確認します
+C:\code\DirectXStart\Player.cpp(241,1): warning C5045: C:\code\DirectXStart\Player.cpp(241) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
   DirectXStart.vcxproj -> C:\code\DirectXStart\x64\Debug\DirectXStart.exe

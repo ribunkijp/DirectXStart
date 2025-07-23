@@ -3,24 +3,47 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
-  <ItemDefinitionGroup>
-    <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
-      <AdditionalOptions>/Wall /w44365 /utf-8 /Qspectre %(AdditionalOptions)</AdditionalOptions>
-      <ExternalWarningLevel>Level3</ExternalWarningLevel>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <ConformanceMode>true</ConformanceMode>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\DirectXTex\DirectXTex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <Link>
-      <AdditionalLibraryDirectories>$($(ProjectDir)..\DirectXTex\DirectXTex\Bin\Desktop_2022\x64\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>DirectXTex.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
-      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
-    </Link>
+	<ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+		<ClCompile>
+			<WarningLevel>Level4</WarningLevel>
+			<AdditionalOptions>/Wall /w44365 /utf-8 /Qspectre %(AdditionalOptions)</AdditionalOptions>
+			<ExternalWarningLevel>Level3</ExternalWarningLevel>
+			<LanguageStandard>stdcpp17</LanguageStandard>
+			<LanguageStandard_C>stdc17</LanguageStandard_C>
+			<ConformanceMode>true</ConformanceMode>
+			<SDLCheck>true</SDLCheck>
+			<AdditionalIncludeDirectories>$(ProjectDir)..\DirectXTex\DirectXTex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+		</ClCompile>
+		<Link>
+			<AdditionalLibraryDirectories>$(ProjectDir)..\DirectXTex\DirectXTex\Bin\Desktop_2022\x64\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>DirectXTex.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Windows</SubSystem>
+			<EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+		<ClCompile>
+		  <WarningLevel>Level4</WarningLevel>
+		  <AdditionalOptions>/Wall /w44365 /utf-8 /Qspectre %(AdditionalOptions)</AdditionalOptions>
+		  <ExternalWarningLevel>Level3</ExternalWarningLevel>
+		  <LanguageStandard>stdcpp17</LanguageStandard>
+		  <LanguageStandard_C>stdc17</LanguageStandard_C>
+		  <ConformanceMode>true</ConformanceMode>
+		  <SDLCheck>true</SDLCheck>
+		  <AdditionalIncludeDirectories>$(ProjectDir)..\DirectXTex\DirectXTex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		  <MultiProcessorCompilation>true</MultiProcessorCompilation>
+		  <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+		</ClCompile>
+		<Link>
+		  <AdditionalLibraryDirectories>$(ProjectDir)..\DirectXTex\DirectXTex\Bin\Desktop_2022\x64\Release\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		  <AdditionalDependencies>DirectXTex.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		  <GenerateDebugInformation>true</GenerateDebugInformation>
+		  <SubSystem>Windows</SubSystem>
+		  <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+		</Link>
   </ItemDefinitionGroup>
   <ItemGroup />
 </Project>
