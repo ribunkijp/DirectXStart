@@ -60,7 +60,7 @@ bool Player::Load(ID3D11Device* device, const std::string& atlasPath, const std:
     m_animationStateData = animationStateData;
     m_animationState = animationState;
     
-    m_animationState->setAnimation(0, "walking", true);
+    m_animationState->setAnimation(0, "running", true);
    
     if (!InitBuffers(device)) {//分配GPU内存，为每帧动画生成的顶点/索引数据准备空间
         return false;
