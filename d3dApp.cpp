@@ -24,9 +24,7 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
             ↓ グラフィックスパイプラインによる自動マッピング
        画面ピクセル位置
    */
-    char buf[128];
-    sprintf_s(buf, sizeof(buf), "logicalWidth: %.2f, logicalHeight: %.2f\n", pState->logicalWidth, pState->logicalHeight);
-    OutputDebugStringA(buf);
+
    // カメラ位置と向きを設定
     pState->view = DirectX::XMMatrixIdentity(); // まずは単位行列、カメラ位置を設定したら更新できる
     // 3D/2D ワールドを画面にマッピング
@@ -249,6 +247,7 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
 
     // --- 透明ブレンドステート作成 ---
     D3D11_BLEND_DESC blendDesc = {};
+    // Normal
     // RenderTarget[0] は最初のレンダーターゲット
     blendDesc.RenderTarget[0].BlendEnable = TRUE; // ブレンド有効
     blendDesc.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA; // ソースのα値
@@ -259,13 +258,31 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
     blendDesc.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD; // α加算
     // D3D11_COLOR_WRITE_ENABLE_ALL は全色成分(RGBA)書込可
     blendDesc.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
+    pState->device->CreateBlendState(&blendDesc, &pState->blendStateNormal);
+ 
+    // Additive
+	D3D11_BLEND_DESC blendDescAdd = blendDesc;
+	blendDescAdd.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA;
+	blendDescAdd.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
+	blendDescAdd.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+	pState->device->CreateBlendState(&blendDescAdd, &pState->blendStateAdditive);
 
-    hr = pState->device->CreateBlendState(&blendDesc, &pState->blendStateNormal);
-    if (FAILED(hr)) {
-        MessageBox(hwnd, L"Failed to create blend state.", L"Error", MB_OK);
-        return false;
-    }
+	// Multiply
+	D3D11_BLEND_DESC blendDescMul = blendDesc;
+	blendDescMul.RenderTarget[0].SrcBlend = D3D11_BLEND_DEST_COLOR;
+	blendDescMul.RenderTarget[0].DestBlend = D3D11_BLEND_ZERO;
+	blendDescMul.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+	pState->device->CreateBlendState(&blendDescMul, &pState->blendStateMultiply);
 
+	// Screen
+	D3D11_BLEND_DESC blendDescScreen = blendDesc;
+	blendDescScreen.RenderTarget[0].SrcBlend = D3D11_BLEND_INV_DEST_COLOR;
+	blendDescScreen.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
+	blendDescScreen.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+	pState->device->CreateBlendState(&blendDescScreen, &pState->blendStateScreen);
+
+    
+    
     // 透明物体用の深度/ステンシルステート作成
     D3D11_DEPTH_STENCIL_DESC transparentDepthStencilDesc = {};
     transparentDepthStencilDesc.DepthEnable = TRUE; // 深度テストは有効（不透明物体との比較）
@@ -281,40 +298,12 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
     }
 
 
-    // Normal
-
-
-    // Additive
-    D3D11_BLEND_DESC blendDescAdd = blendDesc;
-    blendDescAdd.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA;
-    blendDescAdd.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
-    blendDescAdd.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
-    pState->device->CreateBlendState(&blendDescAdd, &pState->blendStateAdditive);
-
-    // Multiply
-    D3D11_BLEND_DESC blendDescMul = blendDesc;
-    blendDescMul.RenderTarget[0].SrcBlend = D3D11_BLEND_DEST_COLOR;
-    blendDescMul.RenderTarget[0].DestBlend = D3D11_BLEND_ZERO;
-    blendDescMul.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
-    pState->device->CreateBlendState(&blendDescMul, &pState->blendStateMultiply);
-
-    // Screen
-    D3D11_BLEND_DESC blendDescScreen = blendDesc;
-    blendDescScreen.RenderTarget[0].SrcBlend = D3D11_BLEND_INV_DEST_COLOR;
-    blendDescScreen.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
-    blendDescScreen.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
-    pState->device->CreateBlendState(&blendDescScreen, &pState->blendStateScreen);
+ 
 
 
 
 
-    pState->player = new Player();
-
-    bool createPlayer = pState->player->Load(pState->device, "assets/player.atlas", "assets/player.skel");
-    if (!createPlayer) {
-        MessageBox(hwnd, L"Failed to create player", L"Error", MB_OK);
-        return false;
-    }
+    
 
     return true; // 成功時はtrue
 }

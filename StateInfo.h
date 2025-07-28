@@ -35,7 +35,7 @@ struct StateInfo {
     //
     ID3D11RenderTargetView* renderTargetView = nullptr;
     //
-     float logicalWidth = 1888.0f;
+    float logicalWidth = 1888.0f;
     float logicalHeight = 1062.0f;
 
     Player* player = nullptr;

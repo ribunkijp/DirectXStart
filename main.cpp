@@ -17,19 +17,10 @@
 #include "d3dApp.h"
 #include "Timer.h"
 #include "Render.h"
-#include <spine/Extension.h>
-#include <spine/Debug.h>
 #include "Player.h"  
+#include "UpdateAll.h"
 
 
-
-static spine::DebugExtension* debugExtension = NULL;
-
-// 由Spine自动调用，用于自定义内存管理
-spine::SpineExtension* spine::getDefaultExtension() {
-    debugExtension = new spine::DebugExtension(new spine::DefaultSpineExtension());
-    return debugExtension;
-}
 
 
 void GetScaledWindowSizeAndPosition(float logicalWidth, float logicalHeight,
@@ -74,7 +65,7 @@ int WINAPI wWinMain(
 
 
     // pState ポインタは全Direct3D描画状態を保存
-    StateInfo* pState = new StateInfo();  // newで初期化
+    StateInfo* pState = new StateInfo(); 
     if (pState == NULL) {
         return 0;
     }
@@ -139,10 +130,18 @@ int WINAPI wWinMain(
             DispatchMessage(&msg);
         }
 
-        timer.Tick();    // 毎フレーム呼び出す
-        float deltaTime = timer.GetDeltaTime();  // 各フレーム経過時間\
+		timer.Tick();    // 毎フレーム呼び出す
+		float deltaTime = timer.GetDeltaTime();  
 
-        pState->player->Update(deltaTime);
+		bool leftPressed = (GetAsyncKeyState('A') & 0x8000) != 0;
+		bool rightPressed = (GetAsyncKeyState('D') & 0x8000) != 0;
+		bool spacePressed = (GetAsyncKeyState(VK_SPACE) & 0x8000) != 0;
+
+        //UpdateAll(pState, deltaTime, leftPressed, rightPressed, spacePressed);
+
+
+
+        //pState->player->Update(deltaTime);
 
         Render(hwnd, pState);
     
@@ -188,7 +187,6 @@ LRESULT CALLBACK WindowProc(
             pState = nullptr;
         }
         PostQuitMessage(0);
-        if (debugExtension) debugExtension->reportLeaks();
 
         return 0;
     case WM_SIZE:
