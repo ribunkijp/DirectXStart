@@ -204,11 +204,11 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
         return false;
     }
     //入力レイアウト作成
-    D3D11_INPUT_ELEMENT_DESC layout[] = {
-        {"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,    0, 0,   D3D11_INPUT_PER_VERTEX_DATA, 0},  
-        {"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,       0, 12,  D3D11_INPUT_PER_VERTEX_DATA, 0},  
-        {"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 20,  D3D11_INPUT_PER_VERTEX_DATA, 0} 
-    };
+	D3D11_INPUT_ELEMENT_DESC layout[] = {
+		{"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,     0,  0, D3D11_INPUT_PER_VERTEX_DATA, 0},
+		{"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT,  0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0},
+		{"TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,        0, 28, D3D11_INPUT_PER_VERTEX_DATA, 0},
+	};
 
     hr = pState->device->CreateInputLayout(
         layout,

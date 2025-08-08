@@ -1,12 +1,20 @@
+/**********************************************************************************
+	Vertex.h
+
+																LI WENHUI
+																2025/08/08
+
+**********************************************************************************/
+
 #ifndef VERTEX_H
 #define VERTEX_H
 
-#include <cstdint>
 
+// 頂点構造体
 struct Vertex {
-    float x, y, z;
-    float u, v;
-    float r, g, b, a;
+	DirectX::XMFLOAT3 position;  // 位置
+	DirectX::XMFLOAT4 color;     // 色
+	DirectX::XMFLOAT2 texCoord;  // テクスチャ座標 (U, V)
 };
 
 #endif

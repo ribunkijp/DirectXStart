@@ -36,26 +36,3 @@ HRESULT LoadTextureAndCreateSRV(ID3D11Device* device, const wchar_t* filename, I
     return hr;
 }
 
-SpineTextureLoader::SpineTextureLoader(ID3D11Device* device) : m_device(device) {
-
-}
-
-void SpineTextureLoader::load(spine::AtlasPage& page, const spine::String& path) {
-    std::wstring wpath = ToWString(path.buffer());
-    ID3D11ShaderResourceView* srv = nullptr;
-    float width = 0, height = 0;
-    HRESULT hr = LoadTextureAndCreateSRV(m_device, wpath.c_str(), &srv, &width, &height);
-    page.texture = srv;         
-    page.width = (int)width;
-    page.height = (int)height;
-}
-void SpineTextureLoader::unload(void* texture) {
-    if (texture) ((ID3D11ShaderResourceView*)texture)->Release();
-}
-
-std::wstring SpineTextureLoader::ToWString(const char* utf8) {
-    int len = MultiByteToWideChar(CP_UTF8, 0, utf8, -1, NULL, 0);
-    std::wstring ws(len - 1, 0);
-    MultiByteToWideChar(CP_UTF8, 0, utf8, -1, &ws[0], len);
-    return ws;
-}
