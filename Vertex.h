@@ -9,6 +9,8 @@
 #ifndef VERTEX_H
 #define VERTEX_H
 
+#include <DirectXMath.h>
+
 
 // í∏ì_ç\ë¢ëÃ
 struct Vertex {

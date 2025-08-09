@@ -11,7 +11,9 @@
 
 struct StateInfo;
 
-void UpdateAll(StateInfo* pState, float deltaTime, bool leftPressed, bool rightPressed, bool spacePressed);
+void UpdatePlayer(StateInfo* pState, float deltaTime);
+
+void UpdatePlayerState(StateInfo* pState, float deltaTime, bool leftPressed, bool rightPressed, bool spacePressed);
 
 
 

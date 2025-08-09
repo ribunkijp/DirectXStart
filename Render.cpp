@@ -7,7 +7,7 @@
 **********************************************************************************/
 
 #include "Render.h"
-#include "Player.h"
+#include "PlayerObject.h"
 #include "StateInfo.h"
 
 
@@ -58,7 +58,7 @@ void Render(HWND hwnd, StateInfo* pState) {
     // s0レジスタはスロット0に対応
     pState->context->PSSetSamplers(0, 1, &pState->samplerState);
 
-    pState->player->Render(pState->context,pState, pState->view, pState->projection);
+    pState->player->Render(pState->context, pState->view, pState->projection);
 
     //for (auto& obj : pState->sceneObjects)
     //{

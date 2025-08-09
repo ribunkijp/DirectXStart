@@ -8,8 +8,15 @@
 
 #include "UpdateAll.h"
 #include "StateInfo.h"
+#include "PlayerObject.h"
 
 
-void UpdateAll(StateInfo* pState, float deltaTime, bool leftPressed, bool rightPressed, bool spacePressed) {
+void UpdatePlayer(StateInfo* pState, float deltaTime) {
+
+    pState->player->Update(deltaTime);
+
+}
+
+void UpdatePlayeState(StateInfo* pState, float deltaTime, bool leftPressed, bool rightPressed, bool spacePressed) {
 
 }

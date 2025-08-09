@@ -17,7 +17,7 @@
 #include "d3dApp.h"
 #include "Timer.h"
 #include "Render.h"
-#include "Player.h"  
+#include "PlayerObject.h"  
 #include "UpdateAll.h"
 
 
@@ -141,7 +141,7 @@ int WINAPI wWinMain(
 
 
 
-        //pState->player->Update(deltaTime);
+        UpdatePlayer(pState, deltaTime);
 
         Render(hwnd, pState);
     

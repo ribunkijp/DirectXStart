@@ -9,7 +9,9 @@
 
 #include "d3dApp.h"
 #include "ConstantBuffer.h"
-#include "Player.h"
+#include "PlayerObject.h"
+#include <vector>
+#include <memory>
 
 
 bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWidth, float clientHeight) {
@@ -298,6 +300,33 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
     }
 
 
+
+    std::vector<AnimationData> animationData;
+	animationData.push_back({
+	  L"assets\\player_idle.png",
+	  10,
+	  5,
+	  2,
+	  24.0f
+	});
+	animationData.push_back({
+	  L"assets\\player_run.png",
+	  8,
+	  4,
+	  2,
+	  24.0f
+	});
+
+	pState->player = std::make_unique<PlayerObject>();
+    pState->player->SetSpeed(200.0f);
+    pState->player->SetPos(200.0f, 828.0f);
+    pState->player->Load(
+        pState->device,
+        pState->context,
+		288.0f,
+		128.0f,
+		animationData
+	);
  
 
 
@@ -311,80 +340,67 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
 
 
 
-// Direct3D リソース解放関数
-void CleanupD3D(StateInfo* pState) {
+void CleanupD3D(StateInfo* s) {
+	if (!s) return;
 
-    if (!pState) return;
+	// 销毁玩家对象
+	if (s->player) s->player.reset();
 
-    // StateInfoが持つD3Dリソースを全て解放
-    if (pState->samplerState) { // サンプラーステート解放
-        pState->samplerState->Release();
-        pState->samplerState = nullptr;
-    }
-    if (pState->pixelShader) { // ピクセルシェーダ解放
-        pState->pixelShader->Release();
-        pState->pixelShader = nullptr;
-    }
-    if (pState->vertexShader) { // 頂点シェーダ解放
-        pState->vertexShader->Release();
-        pState->vertexShader = nullptr;
-    }
-    if (pState->inputLayout) { // 入力レイアウト解放
-        pState->inputLayout->Release();
-        pState->inputLayout = nullptr;
-    }
-    if (pState->rtv) { // レンダーターゲットビュー解放
-        pState->rtv->Release();
-        pState->rtv = nullptr;
-    }
+	// 释放各类状态/视图等（OM/DS/采样器/着色器/布局/RTV）
+	if (s->blendStateScreen) { s->blendStateScreen->Release();   s->blendStateScreen = nullptr; }
+	if (s->blendStateMultiply) { s->blendStateMultiply->Release(); s->blendStateMultiply = nullptr; }
+	if (s->blendStateAdditive) { s->blendStateAdditive->Release(); s->blendStateAdditive = nullptr; }
+	if (s->blendStateNormal) { s->blendStateNormal->Release();   s->blendStateNormal = nullptr; }
 
+	if (s->depthStencilStateTransparent) { s->depthStencilStateTransparent->Release(); s->depthStencilStateTransparent = nullptr; }
+	if (s->depthStencilView) { s->depthStencilView->Release();             s->depthStencilView = nullptr; }
 
-    // デバイスコンテキスト・スワップチェーン解放前に、全操作完了を確認
-    // 通常はデバイス解放前にまずコンテキストを解放し、未完了の操作がないことを確認
-    if (pState->context) {
-        pState->context->Release();
-        pState->context = nullptr;
-    }
+	if (s->samplerState) { s->samplerState->Release(); s->samplerState = nullptr; }
+	if (s->pixelShader) { s->pixelShader->Release();  s->pixelShader = nullptr; }
+	if (s->vertexShader) { s->vertexShader->Release(); s->vertexShader = nullptr; }
+	if (s->inputLayout) { s->inputLayout->Release();  s->inputLayout = nullptr; }
+	if (s->rtv) { s->rtv->Release();          s->rtv = nullptr; }
 
-    if (pState->swapChain) {
-        pState->swapChain->Release();
-        pState->swapChain = nullptr;
-    }
+	// 解绑并清空管线状态，释放 context
+	if (s->context) {
+		s->context->OMSetRenderTargets(0, nullptr, nullptr);
+		s->context->ClearState();
+		s->context->Flush();
+		s->context->Release();
+		s->context = nullptr;
+	}
 
-    // 最後にデバイス本体の解放
-    // デバッグ時は未解放のCOMインターフェースがないか確認
-    if (pState->device) {
+	// 如果可能进过全屏，先切回窗口模式再释放 swapChain
+	if (s->swapChain) {
+		s->swapChain->SetFullscreenState(FALSE, nullptr);
+		s->swapChain->Release();
+		s->swapChain = nullptr;
+	}
 
-        // 【重要修正】デバッグコードは device有効のときのみ
 #ifdef _DEBUG
-        ID3D11Debug* debug = nullptr;
-        if (SUCCEEDED(pState->device->QueryInterface(__uuidof(ID3D11Debug), (void**)&debug)))
-        {
-            debug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL);
-            debug->Release();
-        }
+	if (s->device) {
+		ID3D11Debug* debug = nullptr;
+		if (SUCCEEDED(s->device->QueryInterface(__uuidof(ID3D11Debug), (void**)&debug))) {
+			debug->ReportLiveDeviceObjects(D3D11_RLDO_DETAIL);
+			debug->Release();
+		}
+	}
 #endif
-        // そしてデバイス本体の解放
-        pState->device->Release();
-        pState->device = nullptr;
-    }
 
+	if (s->device) { s->device->Release(); s->device = nullptr; }
 }
 
 
-// ウィンドウサイズ変更時の処理
+// 
 void OnResize(HWND hwnd, StateInfo* pState, UINT width, UINT height)
 {
     if (!pState || !pState->swapChain || !pState->device || !pState->context) return;
 
-    // 既存リソースを解放
     if (pState->rtv) { pState->rtv->Release(); pState->rtv = nullptr; }
     if (pState->depthStencilView) { pState->depthStencilView->Release(); pState->depthStencilView = nullptr; }
-
-    // スワップチェーンのバッファをリサイズ
+ 
     pState->swapChain->ResizeBuffers(0, width, height, DXGI_FORMAT_UNKNOWN, 0);
 
-    // 新しいバックバッファ取得
     ID3D11Texture2D* backBuffer = nullptr;
     HRESULT hr = pState->swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&backBuffer);
     if (SUCCEEDED(hr) && backBuffer) {
@@ -396,7 +412,6 @@ void OnResize(HWND hwnd, StateInfo* pState, UINT width, UINT height)
         return;
     }
 
-    // 新しい深度バッファ作成
     D3D11_TEXTURE2D_DESC depthBufferDesc = {};
     depthBufferDesc.Width = width;
     depthBufferDesc.Height = height;
@@ -410,7 +425,6 @@ void OnResize(HWND hwnd, StateInfo* pState, UINT width, UINT height)
     ID3D11Texture2D* depthStencilBuffer = nullptr;
     hr = pState->device->CreateTexture2D(&depthBufferDesc, nullptr, &depthStencilBuffer);
 
-    // 深度ビュー作成
     D3D11_DEPTH_STENCIL_VIEW_DESC dsvDesc = {};
     dsvDesc.Format = depthBufferDesc.Format;
     dsvDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
@@ -425,18 +439,14 @@ void OnResize(HWND hwnd, StateInfo* pState, UINT width, UINT height)
         return;
     }
 
-    // 新しいレンダーターゲットを再バインド
     pState->context->OMSetRenderTargets(1, &pState->rtv, pState->depthStencilView);
 
-    //    ClearRenderTargetView でウィンドウ全体をクリア
     D3D11_VIEWPORT vp = {};
     vp.Width = static_cast<FLOAT>(width);
     vp.Height = static_cast<FLOAT>(height);
     vp.MinDepth = 0.0f;
     vp.MaxDepth = 1.0f;
     pState->context->RSSetViewports(1, &vp);
-    // この方法が推奨
-
 
     pState->projection = DirectX::XMMatrixOrthographicOffCenterLH(
         0.0f, pState->logicalWidth,

@@ -1,1 +1,155 @@
-﻿
+﻿  d3dApp.cpp
+C:\code\DirectXStart\StateInfo.h(46,11): warning C4820: 'StateInfo': '8' バイトのパディングを データ メンバー 'StateInfo::logicalHeight' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\StateInfo.h(53,35): warning C4820: 'StateInfo': '8' バイトのパディングを データ メンバー 'StateInfo::player' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\StateInfo.h(22,8): warning C4625: 'StateInfo': コピー コンストラクターは暗黙的に削除済みとして定義されました
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\StateInfo.h(22,8): warning C4626: 'StateInfo': 代入演算子は暗黙的に削除済みとして定義されました
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x767 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x768 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x769 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x76b から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x76d から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7d2 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7d4 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7d6 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7d7 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7d8 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7da から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7dc から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7dd から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7de から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7df から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7e0 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7e1 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7e2 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x7e3 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x92c から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x92e から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(1,1): warning C4828: オフセット 0x92f から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x139 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x13a から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x13b から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x13d から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x13f から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x140 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x141 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x142 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x177 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x19e から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x1c3 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x1c5 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x1c7 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x1c9 から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x1cb から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x1cc から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x1cd から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x1ce から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\Vertex.h(1,1): warning C4828: オフセット 0x1cf から始まる、現在のソースの文字セット (コードページ 65001) では使用できない文字がファイルに含まれています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(34,7): warning C4099: 'PlayerObject': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+      C:\code\DirectXStart\PlayerObject.h(34,7):
+      'PlayerObject' の宣言を確認してください
+  
+C:\code\DirectXStart\PlayerObject.h(77,7): warning C4820: 'PlayerObject': '3' バイトのパディングを データ メンバー 'PlayerObject::isAnimated' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(79,18): warning C4820: 'PlayerObject': '4' バイトのパディングを データ メンバー 'PlayerObject::direction' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(100,8): warning C4820: 'PlayerObject': '4' バイトのパディングを データ メンバー 'PlayerObject::objH' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\PlayerObject.h(109,7): warning C4820: 'PlayerObject': '4' バイトのパディングを データ メンバー 'PlayerObject::indexCount' の後に追加しました。
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
+  
+C:\code\DirectXStart\d3dApp.cpp(17,39): warning C4100: 'device': 参照されないパラメーター
+  DirectXStart.vcxproj -> C:\code\DirectXStart\x64\Debug\DirectXStart.exe

@@ -137,10 +137,10 @@
   <ItemGroup>
     <ClCompile Include="BufferUtils.cpp" />
     <ClCompile Include="d3dApp.cpp" />
-    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerObject.cpp" />
     <ClCompile Include="Render.cpp" />
+    <ClCompile Include="StateInfo.cpp" />
     <ClCompile Include="TextureLoader.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="UpdateAll.cpp" />
@@ -151,7 +151,7 @@
     <ClInclude Include="ConstantBuffer.h" />
     <ClInclude Include="d3dApp.h" />
     <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerObject.h" />
     <ClInclude Include="Render.h" />
     <ClInclude Include="StateInfo.h" />
     <ClInclude Include="TextureLoader.h" />
@@ -169,6 +169,10 @@
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
       <FileType>Document</FileType>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\player_idle.png" />
+    <Image Include="assets\player_run.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
