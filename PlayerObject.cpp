@@ -174,12 +174,23 @@ void PlayerObject::SetSpeed(float speed_new) {
 
 
 void PlayerObject::Update(float deltaTime) {
-	if (!this->isAnimated) return;
+	if (!this->isAnimated || this->animationFinished) return;
 
 	animationTimer += deltaTime;
 	if (animationTimer >= (1.0f / fps)) {
-		frameIndex = (frameIndex + 1) % totalFrames;
 		animationTimer = 0.0f;
+
+        if (this->isLooping) {
+            frameIndex = (frameIndex + 1) % totalFrames;
+        }
+        else {
+            if (frameIndex == totalFrames - 1) {
+                animationFinished = true;
+            }
+            else {
+                frameIndex++;
+            }
+        }
 	}
 
 	float frameW = 1.0f / static_cast<float>(columns);
