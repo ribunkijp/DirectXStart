@@ -99,6 +99,8 @@ private:
 	float objW = 0.0f;
 	float objH = 0.0f;
 	bool isFlipX = false;
+    bool isLooping = true; 
+    bool animationFinished = false;
 
 
 	std::vector<AnimationData> animationData;

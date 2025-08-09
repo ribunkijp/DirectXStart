@@ -1,4 +1,4 @@
-/**********************************************************************************
+﻿/**********************************************************************************
     d3dApp.cpp
 
                                                                 LI WENHUI
@@ -362,8 +362,8 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
     pState->player->Load(
         pState->device,
         pState->context,
-		576.0f,
-		256.0f,
+		288.0f * 3.0f,//864.0f
+		128.0f * 3.0f,//384.0f
 		animationData,
         true
 	);

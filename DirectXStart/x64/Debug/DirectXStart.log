@@ -1,48 +1,32 @@
-﻿  PlayerObject.cpp
+﻿  d3dApp.cpp
 C:\code\DirectXStart\StateInfo.h(46,11): warning C4820: 'StateInfo': '8' バイトのパディングを データ メンバー 'StateInfo::logicalHeight' の後に追加しました。
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\DirectXStart\StateInfo.h(53,35): warning C4820: 'StateInfo': '8' バイトのパディングを データ メンバー 'StateInfo::player' の後に追加しました。
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\DirectXStart\StateInfo.h(22,8): warning C4625: 'StateInfo': コピー コンストラクターは暗黙的に削除済みとして定義されました
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\DirectXStart\StateInfo.h(22,8): warning C4626: 'StateInfo': 代入演算子は暗黙的に削除済みとして定義されました
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\DirectXStart\PlayerObject.h(34,7): warning C4099: 'PlayerObject': タイプ名は最初 'struct' として使われていましたが 'class' として使われています。
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
       C:\code\DirectXStart\PlayerObject.h(34,7):
       'PlayerObject' の宣言を確認してください
   
 C:\code\DirectXStart\PlayerObject.h(78,7): warning C4820: 'PlayerObject': '3' バイトのパディングを データ メンバー 'PlayerObject::isAnimated' の後に追加しました。
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\DirectXStart\PlayerObject.h(81,18): warning C4820: 'PlayerObject': '4' バイトのパディングを データ メンバー 'PlayerObject::direction' の後に追加しました。
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\DirectXStart\PlayerObject.h(101,7): warning C4820: 'PlayerObject': '3' バイトのパディングを データ メンバー 'PlayerObject::isFlipX' の後に追加しました。
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
 C:\code\DirectXStart\PlayerObject.h(108,7): warning C4820: 'PlayerObject': '4' バイトのパディングを データ メンバー 'PlayerObject::indexCount' の後に追加しました。
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
+  (ソース ファイル 'd3dApp.cpp' をコンパイルしています)
   
-C:\code\DirectXTex\DirectXTex\DirectXTex.h(434,21): warning C4820: 'DirectX::Image': '4' バイトのパディングを データ メンバー 'DirectX::Image::format' の後に追加しました。
-  (ソース ファイル 'PlayerObject.cpp' をコンパイルしています)
-  
-C:\code\DirectXStart\PlayerObject.cpp(48,30): warning C4458: 'animationData' を宣言すると、クラス メンバーが隠蔽されます
-      C:\code\DirectXStart\PlayerObject.h(104,29):
-      'PlayerObject::animationData' の宣言を確認してください
-  
-C:\code\DirectXStart\PlayerObject.cpp(49,7): warning C4458: 'isAnimated' を宣言すると、クラス メンバーが隠蔽されます
-      C:\code\DirectXStart\PlayerObject.h(78,7):
-      'PlayerObject::isAnimated' の宣言を確認してください
-  
-C:\code\DirectXStart\PlayerObject.cpp(75,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\PlayerObject.cpp(75,1): warning C5045: C:\code\DirectXStart\PlayerObject.cpp(73) : 注: この行で比較を行ってインデックス 'i' の範囲を確認します
-C:\code\DirectXStart\PlayerObject.cpp(75,1): warning C5045: C:\code\DirectXStart\PlayerObject.cpp(75) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
-C:\code\DirectXStart\PlayerObject.cpp(213,1): warning C5045: /Qspectre スイッチが 
-C:\code\DirectXStart\PlayerObject.cpp(213,1): warning C5045: C:\code\DirectXStart\PlayerObject.cpp(203) : 注: この行で比較を行ってインデックス '' の範囲を確認します
-C:\code\DirectXStart\PlayerObject.cpp(213,1): warning C5045: C:\code\DirectXStart\PlayerObject.cpp(213) : 注: この行に呼び出しを入力します に指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入します
+C:\code\DirectXStart\d3dApp.cpp(17,39): warning C4100: 'device': 参照されないパラメーター
   DirectXStart.vcxproj -> C:\code\DirectXStart\x64\Debug\DirectXStart.exe
