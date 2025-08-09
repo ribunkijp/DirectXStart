@@ -159,28 +159,66 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
    // 頂点シェーダ・ピクセルシェーダのコンパイル
     ID3DBlob* vsBlob = nullptr;         // 頂点シェーダバイナリ格納
     ID3DBlob* psBlob = nullptr;         // ピクセルシェーダバイナリ格納
+    ID3DBlob* errorBlob = nullptr;
 
-    // 頂点シェーダ（VS）コンパイル
-    hr = D3DCompileFromFile(
-        L"shader.hlsl",                 // HLSLファイルパス
-        nullptr, nullptr,
-        "VSMain", "vs_5_0",
-        0, 0,
-        &vsBlob, nullptr
-    );
-    if (FAILED(hr)) return false;
+	// 顶点シェーダ（VS）コンパイル
+	hr = D3DCompileFromFile(
+		L"shader.hlsl",
+		nullptr,
+		nullptr,
+		"VSMain",
+		"vs_5_0",
+		D3DCOMPILE_ENABLE_STRICTNESS | D3DCOMPILE_DEBUG, // <--- 添加调试和严格模式标志
+		0,
+		&vsBlob,
+		&errorBlob // <--- 传入 errorBlob 的地址来捕获错误
+	);
+
+	if (FAILED(hr)) {
+		if (errorBlob) {
+			// 如果有错误信息，就显示出来
+			const char* errorMsg = (const char*)errorBlob->GetBufferPointer();
+			wchar_t wideErrorMsg[1024];
+			mbstowcs_s(nullptr, wideErrorMsg, 1024, errorMsg, _TRUNCATE);
+			MessageBox(hwnd, wideErrorMsg, L"Vertex Shader Compilation Error", MB_OK);
+			errorBlob->Release();
+		}
+		else {
+			// 如果没有错误信息，很可能是文件没找到
+			MessageBox(hwnd, L"Failed to compile vertex shader. File not found?", L"Error", MB_OK);
+		}
+		return false;
+	}
     // ピクセルシェーダ（PS）コンパイル
-    hr = D3DCompileFromFile(
-        L"shader.hlsl",
-        nullptr, nullptr,
-        "PSMain", "ps_5_0",
-        0, 0,
-        &psBlob, nullptr
-    );
-    if (FAILED(hr)) {
-        vsBlob->Release();
-        return false;
-    }
+	hr = D3DCompileFromFile(
+		L"shader.hlsl",
+		nullptr,
+		nullptr,
+		"PSMain",
+		"ps_5_0",
+		D3DCOMPILE_ENABLE_STRICTNESS | D3DCOMPILE_DEBUG,
+		0,
+		&psBlob,
+		&errorBlob
+	);
+
+	if (FAILED(hr)) {
+		if (errorBlob) {
+			const char* errorMsg = (const char*)errorBlob->GetBufferPointer();
+			wchar_t wideErrorMsg[1024];
+			mbstowcs_s(nullptr, wideErrorMsg, 1024, errorMsg, _TRUNCATE);
+			MessageBox(hwnd, wideErrorMsg, L"Pixel Shader Compilation Error", MB_OK);
+			errorBlob->Release();
+		}
+		else {
+			MessageBox(hwnd, L"Failed to compile pixel shader. File not found?", L"Error", MB_OK);
+		}
+		if (vsBlob) vsBlob->Release(); // 别忘了释放已成功的vsBlob
+		return false;
+	}
+
+	// 如果编译成功，释放 errorBlob (如果它被创建过)
+	if (errorBlob) errorBlob->Release();
 
     // シェーダオブジェクト作成（GPUで使える形式に変換）
     hr = pState->device->CreateVertexShader(
@@ -192,6 +230,7 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
     if (FAILED(hr)) {
         vsBlob->Release();
         psBlob->Release();
+        MessageBox(hwnd, L"d3dApp.cpp 198", L"错误", MB_OK);
         return false;
     }
     hr = pState->device->CreatePixelShader(
@@ -307,7 +346,7 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
 	  10,
 	  5,
 	  2,
-	  24.0f
+	  10.0f
 	});
 	animationData.push_back({
 	  L"assets\\player_run.png",
@@ -319,13 +358,14 @@ bool InitD3D(HWND hwnd, ID3D11Device* device, StateInfo* pState, float clientWid
 
 	pState->player = std::make_unique<PlayerObject>();
     pState->player->SetSpeed(200.0f);
-    pState->player->SetPos(200.0f, 828.0f);
+    pState->player->SetPos(200.0f, 600.0f);
     pState->player->Load(
         pState->device,
         pState->context,
-		288.0f,
-		128.0f,
-		animationData
+		576.0f,
+		256.0f,
+		animationData,
+        true
 	);
  
 

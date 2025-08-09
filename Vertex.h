@@ -1,4 +1,4 @@
-/**********************************************************************************
+Ôªø/**********************************************************************************
 	Vertex.h
 
 																LI WENHUI
@@ -12,11 +12,11 @@
 #include <DirectXMath.h>
 
 
-// í∏ì_ç\ë¢ëÃ
+//
 struct Vertex {
-	DirectX::XMFLOAT3 position;  // à íu
-	DirectX::XMFLOAT4 color;     // êF
-	DirectX::XMFLOAT2 texCoord;  // ÉeÉNÉXÉ`ÉÉç¿ïW (U, V)
+	DirectX::XMFLOAT3 position;
+	DirectX::XMFLOAT4 color;
+	DirectX::XMFLOAT2 texCoord;
 };
 
 #endif

@@ -14,7 +14,8 @@ cbuffer ConstantBuffer : register(b0)
     
     float2 texOffset;
     float2 texScale;
-    float2 padding; // 16バイトアライメントを保持するため
+    uint uFlipX;
+    float3 padding;
 };
 // テクスチャオブジェクト (Texture2D) とサンプラー (SamplerState) を宣言
 // register(t0) はテクスチャをレジスタ t0 にバインドすることを意味する
@@ -54,7 +55,11 @@ PS_INPUT VSMain(VS_INPUT input)
     output.pos = projPos;
     
     output.col = input.col; // 頂点カラーをピクセルシェーダーへ渡す
-    output.tex = input.tex * texScale + texOffset;
+    
+    float2 uv = input.tex;
+    if (uFlipX != 0) uv.x = 1.0 - uv.x;
+
+    output.tex = uv * texScale + texOffset;
     //
     return output;
 }

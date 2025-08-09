@@ -1,4 +1,4 @@
-/**********************************************************************************
+ï»¿/**********************************************************************************
     Player.cpp
 
                                                                 LI WENHUI
@@ -15,19 +15,11 @@ PlayerObject::PlayerObject()
 	: vertexBuffer(nullptr),
 	indexBuffer(nullptr),
 	constantBuffer(nullptr),
-	texOffset{ 0.0f, 0.0f },
-	texScale{ 1.0f, 1.0f },
-	fps(8.0f),
 	animationTimer(0.0f),
 	frameIndex(0),
-	totalFrames(1),
-	columns(1),
-	rows(1),
-	indexCount(0),
-	modelMatrix(DirectX::XMMatrixIdentity())
+	indexCount(0)
 {
-	texOffset[0] = texOffset[1] = 0.0f;
-	texScale[0] = texScale[1] = 1.0f;
+	
 }
 
 PlayerObject::~PlayerObject() {
@@ -53,7 +45,8 @@ bool PlayerObject::Load(
 	ID3D11DeviceContext* context,
 	float width,
 	float height,
-	std::vector<AnimationData>& animationData
+	std::vector<AnimationData>& animationData,
+	bool isAnimated
 ) {
 	this->animationData = animationData;
 
@@ -65,7 +58,7 @@ bool PlayerObject::Load(
 	rows = animationData[0].rows;
 	fps = animationData[0].fps;
 
-	// ’è”ƒoƒbƒtƒ@‚ðì¬
+	//
 	D3D11_BUFFER_DESC cbd = {};
 	cbd.Usage = D3D11_USAGE_DYNAMIC;
 	cbd.ByteWidth = sizeof(ConstantBuffer);
@@ -74,33 +67,28 @@ bool PlayerObject::Load(
 	device->CreateBuffer(&cbd, nullptr, &constantBuffer);
 
 
-
 	textureSrvs.resize(static_cast<size_t>(PlayerAnimationIndex::Count));
 
 
 	for (size_t i = 0; i < animationData.size(); i++) {
-		// ƒeƒNƒXƒ`ƒƒ‚Ì“Ç‚Ýž‚Ý
+		// ãƒ†ã‚¯ã‚¹ãƒãƒ£ã®èª­ã¿è¾¼ã¿
 		if (FAILED(LoadTextureAndCreateSRV(device, animationData[i].texturePath.c_str(), &textureSrvs[i], &textureWidth, &textureHeight))) {
 			return false;
 		}
 	}
 
+	this->isAnimated = isAnimated;
 
-
-
-
-	// ƒAƒjƒ[ƒVƒ‡ƒ“‚Å‚È‚¢ê‡‚ÍƒeƒNƒXƒ`ƒƒ‚ÌƒIƒtƒZƒbƒgEƒXƒP[ƒ‹‚ðÝ’è
-	if (!isAnimated) {
+	//
+	if (!this->isAnimated) {
 		texOffset[0] = 0.0f;
 		texOffset[1] = 0.0f;
 		texScale[0] = 1.0f;
 		texScale[1] = 1.0f;
 	}
 
-
 	objW = width;
 	objH = height;
-
 
 	return true;
 }
@@ -132,10 +120,10 @@ void PlayerObject::InitVertexData(ID3D11Device* device, ID3D11DeviceContext* con
 
 
 float PlayerObject::GetPosX() const {
-	return modelMatrix.r[3].m128_f32[0];// x
+	return modelMatrix.r[3].m128_f32[0];
 }
 float PlayerObject::GetPosY() const {
-	return modelMatrix.r[3].m128_f32[1];// y
+	return modelMatrix.r[3].m128_f32[1];
 }
 
 float PlayerObject::GetW() const {
@@ -146,7 +134,11 @@ float PlayerObject::GetH() const {
 }
 
 void PlayerObject::SetPos(float x, float y) {
-	modelMatrix = DirectX::XMMatrixTranslation(x, y, 0.0f);
+	translationMatrix = DirectX::XMMatrixTranslation(x, y, 0.0f);
+}
+
+void PlayerObject::SetFlip(bool flip) {
+	isFlipX = flip;
 }
 
 void PlayerObject::SetFrameIndex(int idx) { frameIndex = idx; }
@@ -162,7 +154,7 @@ void PlayerObject::SetAnimationData(PlayerAnimationIndex index) {
 	rows = animationData[static_cast<size_t>(index)].rows;
 	fps = animationData[static_cast<size_t>(index)].fps;
 
-	if (!isAnimated) {
+	if (!this->isAnimated) {
 		texOffset[0] = 0.0f;
 		texOffset[1] = 0.0f;
 		texScale[0] = 1.0f;
@@ -182,7 +174,7 @@ void PlayerObject::SetSpeed(float speed_new) {
 
 
 void PlayerObject::Update(float deltaTime) {
-	if (!isAnimated) return;
+	if (!this->isAnimated) return;
 
 	animationTimer += deltaTime;
 	if (animationTimer >= (1.0f / fps)) {
@@ -204,9 +196,9 @@ void PlayerObject::Update(float deltaTime) {
 void PlayerObject::UpdateConstantBuffer(ID3D11DeviceContext* context,
 	const DirectX::XMMATRIX& view, const DirectX::XMMATRIX& projection) {
 
-	// GPU‚ÌconstantBuffer‚ðCPU‚ªƒAƒNƒZƒX‚Å‚«‚éƒƒ‚ƒŠ‚Éƒ}ƒbƒsƒ“ƒO‚µAV‚µ‚¢ƒf[ƒ^‚ð‘‚«ž‚Þ
-	// Direct3D‚ÌMapŒã‚ÉA‘‚«ž‚Ý‰Â”\‚Èƒƒ‚ƒŠƒAƒhƒŒƒXivoid*Œ^j‚ð“¾‚ç‚ê‚é
 	D3D11_MAPPED_SUBRESOURCE mappedResource;
+
+	modelMatrix = translationMatrix;
 
 	if (SUCCEEDED(context->Map(constantBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource))) {
 		ConstantBuffer* cb = (ConstantBuffer*)mappedResource.pData;
@@ -217,6 +209,7 @@ void PlayerObject::UpdateConstantBuffer(ID3D11DeviceContext* context,
 		cb->texOffset[1] = texOffset[1];
 		cb->texScale[0] = texScale[0];
 		cb->texScale[1] = texScale[1];
+		cb->uFlipX = isFlipX ? 1 : 0;
 		context->Unmap(constantBuffer, 0);
 	}
 }
@@ -226,19 +219,19 @@ void PlayerObject::Render(ID3D11DeviceContext* context, const DirectX::XMMATRIX&
 
 	UpdateConstantBuffer(context, view, projection);
 
-	// ’¸“_ƒoƒbƒtƒ@‚ÌƒXƒgƒ‰ƒCƒhistridej‚ðXV
-	// Vertex\‘¢‘Ì‚ÌƒTƒCƒY‚Æˆê’v‚³‚¹‚é‚±‚Æ
+	
+	// 
 	UINT stride = sizeof(Vertex);
-	// offsetiƒIƒtƒZƒbƒgjF’¸“_ƒoƒbƒtƒ@‚Ìæ“ª‚©‚ç‰½ƒoƒCƒg–Ú‚©‚çƒf[ƒ^‚ð“Ç‚Þ‚©B‚±‚±‚Í0‚ÅAƒoƒbƒtƒ@‚Ìæ“ª‚©‚ç“Ç‚Þ
+	// 
 	UINT offset = 0;
-	// ’¸“_ƒoƒbƒtƒ@‚ðÝ’è
+	// 
 	context->IASetVertexBuffers(0, 1, &vertexBuffer, &stride, &offset);
-	// ƒCƒ“ƒfƒbƒNƒXƒoƒbƒtƒ@‚ðÝ’èBŠeƒCƒ“ƒfƒbƒNƒX‚Í32ƒrƒbƒg‚Ì•„†‚È‚µ®”
+	// 
 	context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
-	// HLSL‚ÌPSMain‚Åcbuffer ConstantBuffer‚ðŽg‚¤Û‚ÉƒZƒbƒg
+	// 
 	context->VSSetConstantBuffers(0, 1, &constantBuffer);
-	// PSSetShaderResourcesiŠJŽnƒXƒƒbƒgAƒrƒ…[”ASRV”z—ñƒ|ƒCƒ“ƒ^j
-	// t0ƒŒƒWƒXƒ^‚ªƒXƒƒbƒg0‚É‘Î‰ž
+	//
+	
 	if (state == PlayerAnimationState::Idle) {
 		if (direction == PlayerDirection::Left) {
 			context->PSSetShaderResources(0, 1, &textureSrvs[static_cast<size_t>(PlayerAnimationIndex::Idle)]);

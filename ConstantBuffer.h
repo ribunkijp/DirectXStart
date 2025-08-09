@@ -1,4 +1,4 @@
-/**********************************************************************************
+﻿/**********************************************************************************
     ConstantBuffer.h
 
                                                                 LI WENHUI
@@ -17,7 +17,8 @@ struct ConstantBuffer {
     DirectX::XMMATRIX projection;
     float texOffset[2];
     float texScale[2];
-    float padding[4];
+	uint32_t uFlipX;
+    float pad[3];
 };
 
 

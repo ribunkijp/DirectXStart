@@ -1,4 +1,4 @@
-/**********************************************************************************
+Ôªø/**********************************************************************************
     Player.h
 
                                                                 LI WENHUI
@@ -41,7 +41,8 @@ public:
 		ID3D11DeviceContext* context,
 		float width,
 		float height,
-		std::vector<AnimationData>& animationData
+		std::vector<AnimationData>& animationData,
+		bool isAnimated
 	);
 
 	void Update(float deltaTime);
@@ -57,8 +58,6 @@ public:
 	float textureWidth = 0.0f;
 	float textureHeight = 0.0f;
 
-
-
 	float GetPosX() const;
 	float GetPosY() const;
 	float GetW() const;
@@ -66,6 +65,8 @@ public:
 
 	void SetPos(float x, float y);
 
+	void SetFlip(bool flip);
+	
 	void SetFrameIndex(int idx);
 
 	void ResetAnimationTimer();
@@ -75,41 +76,40 @@ public:
 	float GetSpeed() const;
 	void SetSpeed(float speed_new);
 	bool isAnimated = false;
+	
 	PlayerAnimationState state = PlayerAnimationState::Idle;
 	PlayerDirection direction = PlayerDirection::Right;
 
 private:
 	void InitVertexData(ID3D11Device* device, ID3D11DeviceContext* context, float width, float height);
 
-	// GPUÉäÉ\Å[ÉX
 	ID3D11Buffer* vertexBuffer;
 	ID3D11Buffer* indexBuffer;
 	ID3D11Buffer* constantBuffer;
-
-	// ÉAÉjÉÅÅ[ÉVÉáÉìêßå‰
-	float texOffset[2];
-	float texScale[2];
-	float fps;
+	
+	float texOffset[2] = { 0.0f, 0.0f };
+	float texScale[2] = { 1.0f, 1.0f };
+	float fps = 8.0f;
 	float animationTimer;
 	int frameIndex;
-	int totalFrames;
-	int columns;
-	int rows;
+	int totalFrames = 1;
+	int columns = 1;
+	int rows = 1;
 	float speed = 0.0f;
 	float objW = 0.0f;
 	float objH = 0.0f;
+	bool isFlipX = false;
 
-	//
+
 	std::vector<AnimationData> animationData;
 
-	//
 	std::vector<ID3D11ShaderResourceView*> textureSrvs;
 
-	// ï`âÊ
 	UINT indexCount;
 
-	// 
-	DirectX::XMMATRIX modelMatrix;
+	DirectX::XMMATRIX modelMatrix = DirectX::XMMatrixIdentity();
+	DirectX::XMMATRIX translationMatrix = DirectX::XMMatrixIdentity();
+
 };
 
 

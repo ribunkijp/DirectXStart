@@ -100,13 +100,14 @@ int WINAPI wWinMain(
         return 0;
     }
 
-    ShowWindow(hwnd, nCmdShow);
+    //ShowWindow(hwnd, nCmdShow);
+    ShowWindow(hwnd, SW_SHOWNORMAL);
 
     //
     RECT rect;
     GetClientRect(hwnd, &rect);
-    float clientWidth = static_cast<float>(rect.right - rect.left);
-    float clientHeight = static_cast<float>(rect.bottom - rect.top);
+    auto clientWidth = static_cast<float>(rect.right - rect.left);
+    auto clientHeight = static_cast<float>(rect.bottom - rect.top);
 
     if (!InitD3D(hwnd, pState->device, pState, clientWidth, clientHeight)) {
         MessageBox(hwnd, L"D3D 初始化失败!", L"错误", MB_OK);
