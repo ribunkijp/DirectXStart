@@ -234,26 +234,32 @@ void PlayerObject::Render(ID3D11DeviceContext* context, const DirectX::XMMATRIX&
 	
 	if (state == PlayerAnimationState::Idle) {
 		if (direction == PlayerDirection::Left) {
+            SetFlip(true);
 			context->PSSetShaderResources(0, 1, &textureSrvs[static_cast<size_t>(PlayerAnimationIndex::Idle)]);
 		}
 		else if (direction == PlayerDirection::Right) {
+            SetFlip(false);
 			context->PSSetShaderResources(0, 1, &textureSrvs[static_cast<size_t>(PlayerAnimationIndex::Idle)]);
 		}
 
 	}
 	else if (state == PlayerAnimationState::Run) {
 		if (direction == PlayerDirection::Left) {
+            SetFlip(true);
 			context->PSSetShaderResources(0, 1, &textureSrvs[static_cast<size_t>(PlayerAnimationIndex::Run)]);
 		}
 		else if (direction == PlayerDirection::Right) {
+            SetFlip(false);
 			context->PSSetShaderResources(0, 1, &textureSrvs[static_cast<size_t>(PlayerAnimationIndex::Run)]);
 		}
 	}
 	else if (state == PlayerAnimationState::Jump) {
 		if (direction == PlayerDirection::Left) {
+            SetFlip(true);
 			context->PSSetShaderResources(0, 1, &textureSrvs[static_cast<size_t>(PlayerAnimationIndex::Jump)]);
 		}
 		else if (direction == PlayerDirection::Right) {
+            SetFlip(false);
 			context->PSSetShaderResources(0, 1, &textureSrvs[static_cast<size_t>(PlayerAnimationIndex::Jump)]);
 		}
 	}
